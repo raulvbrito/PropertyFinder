@@ -1,0 +1,22 @@
+PODS:
+  - SDWebImage (4.4.5):
+    - SDWebImage/Core (= 4.4.5)
+  - SDWebImage/Core (4.4.5)
+  - Tailor (3.0.0)
+
+DEPENDENCIES:
+  - SDWebImage
+  - Tailor
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - SDWebImage
+    - Tailor
+
+SPEC CHECKSUMS:
+  SDWebImage: ecc03494e973b93b80213649d32175f8d2d17d4d
+  Tailor: 4fb574e8815d076abbf2bd7ffdbf4b14103fe17c
+
+PODFILE CHECKSUM: 26c0bba55e104220d4f80c07bb37f63e158c158a
+
+COCOAPODS: 1.5.3
