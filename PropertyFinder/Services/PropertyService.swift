@@ -20,8 +20,8 @@ class PropertyService: BaseService {
 		}
 		
 		do {
-			let data = try Data(contentsOf: jsonPath, options: .mappedIfSafe)
-			let result = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
+			let jsonData = try Data(contentsOf: jsonPath, options: .mappedIfSafe)
+			let result = try JSONSerialization.jsonObject(with: jsonData, options: .mutableLeaves)
 			if let result = result as? Dictionary<String, AnyObject> {
 				let properties = result.array("properties")?.compactMap(Property.init) ?? []
 				

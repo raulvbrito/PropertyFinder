@@ -10,12 +10,9 @@ import UIKit
 
 class PropertiesViewController: BaseViewController {
 	
-	// MARK: - Injections
+	// MARK: - Properties
 	
-	var propertiesViewModels = [PropertyViewModel]()
-	
-	
-	// MARK: - Outlets
+	var propertyViewModels = [PropertyViewModel]()
 	
 	@IBOutlet var tableView: UITableView!
 	
@@ -38,8 +35,34 @@ class PropertiesViewController: BaseViewController {
 				return
 			}
 			
-			self.propertiesViewModels = properties.map({return PropertyViewModel(property: $0)})
+			self.propertyViewModels = properties.map({return PropertyViewModel(property: $0)})
 		}
 	}
 
+}
+
+
+// MARK: - Extensions
+
+extension PropertiesViewController: UITableViewDelegate, UITableViewDataSource {
+	
+	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		return propertyViewModels.count
+	}
+	
+	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+		return 240
+	}
+	
+	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+		let cell = tableView.dequeueReusableCell(withIdentifier: "PropertyTableViewCell", for: indexPath) as? PropertyTableViewCell
+		
+		cell?.propertyViewModel = propertyViewModels[indexPath.row]
+		
+		return cell ?? UITableViewCell()
+	}
+	
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		tableView.deselectRow(at: indexPath, animated: true)
+	}
 }

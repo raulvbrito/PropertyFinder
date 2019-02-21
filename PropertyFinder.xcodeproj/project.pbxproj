@@ -19,6 +19,7 @@
 		41AE26AF221F226700E58C84 /* PropertyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AE26AE221F226700E58C84 /* PropertyService.swift */; };
 		41AE26B4221F288100E58C84 /* Properties.json in Resources */ = {isa = PBXBuildFile; fileRef = 41AE26B3221F288100E58C84 /* Properties.json */; };
 		41AE26B6221F2D2800E58C84 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AE26B5221F2D2800E58C84 /* BaseViewController.swift */; };
+		41AE26B8221F35AB00E58C84 /* PropertyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AE26B7221F35AB00E58C84 /* PropertyTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		41AE26AE221F226700E58C84 /* PropertyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyService.swift; sourceTree = "<group>"; };
 		41AE26B3221F288100E58C84 /* Properties.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Properties.json; sourceTree = "<group>"; };
 		41AE26B5221F2D2800E58C84 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		41AE26B7221F35AB00E58C84 /* PropertyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyTableViewCell.swift; sourceTree = "<group>"; };
 		7773439B0CBE2D4ABDA18634 /* Pods-PropertyFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PropertyFinder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PropertyFinder/Pods-PropertyFinder.debug.xcconfig"; sourceTree = "<group>"; };
 		CC55F250B90CDEE86AACFBEC /* Pods_PropertyFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PropertyFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -123,6 +125,7 @@
 		41AE26A6221F184100E58C84 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				41AE26B7221F35AB00E58C84 /* PropertyTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 				41AE26AA221F1E6700E58C84 /* Property.swift in Sources */,
 				41AE26AF221F226700E58C84 /* PropertyService.swift in Sources */,
 				41AE26B6221F2D2800E58C84 /* BaseViewController.swift in Sources */,
+				41AE26B8221F35AB00E58C84 /* PropertyTableViewCell.swift in Sources */,
 				41AE26A3221F180200E58C84 /* PropertiesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

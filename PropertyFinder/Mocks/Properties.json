@@ -1,17 +1,27 @@
 {
 	"properties": [
 		{
-			"image_url": "https://cdn.shopify.com/s/files/1/1050/2604/products/Living.jpg?v=1505397146",
-			"name": "Luxurious Apartment",
+			"images": [
+				"https://cdn.shopify.com/s/files/1/1050/2604/products/Living.jpg?v=1505397146",
+				"https://cdn.shopify.com/s/files/1/1050/2604/products/Living.jpg?v=1505397146",
+				"https://cdn.shopify.com/s/files/1/1050/2604/products/Living.jpg?v=1505397146",
+				"https://cdn.shopify.com/s/files/1/1050/2604/products/Living.jpg?v=1505397146"
+			],
+			"name": "High Floor Apartment",
 			"description": "Random description",
 			"price": "195,000",
 			"type": "apartment",
-			"location": "Palm Jumeirah, Dubai",
+			"location": "Jumeirah Lake Towers, Dubai",
 			"bedroom_count": 5,
 			"bathroom_count": 3
 		},
 		{
-		   "image_url": "https://cdn.shopify.com/s/files/1/1050/2604/products/Living.jpg?v=1505397146",
+		   "images": [
+				"https://cdn.shopify.com/s/files/1/1050/2604/products/Living.jpg?v=1505397146",
+				"https://cdn.shopify.com/s/files/1/1050/2604/products/Living.jpg?v=1505397146",
+				"https://cdn.shopify.com/s/files/1/1050/2604/products/Living.jpg?v=1505397146",
+				"https://cdn.shopify.com/s/files/1/1050/2604/products/Living.jpg?v=1505397146"
+			],
 		   "name": "Luxurious Apartment",
 		   "description": "Random description",
 		   "price": "195,000",
@@ -21,7 +31,12 @@
 		   "bathroom_count": 3
 		 },
 		 {
-		   "image_url": "https://cdn.shopify.com/s/files/1/1050/2604/products/Living.jpg?v=1505397146",
+		   "images": [
+				"https://cdn.shopify.com/s/files/1/1050/2604/products/Living.jpg?v=1505397146",
+				"https://cdn.shopify.com/s/files/1/1050/2604/products/Living.jpg?v=1505397146",
+				"https://cdn.shopify.com/s/files/1/1050/2604/products/Living.jpg?v=1505397146",
+				"https://cdn.shopify.com/s/files/1/1050/2604/products/Living.jpg?v=1505397146"
+			],
 		   "name": "Luxurious Apartment",
 		   "description": "Random description",
 		   "price": "195,000",
@@ -31,7 +46,12 @@
 		   "bathroom_count": 3
 		 },
 		 {
-		   "image_url": "https://cdn.shopify.com/s/files/1/1050/2604/products/Living.jpg?v=1505397146",
+		   "images": [
+				"https://cdn.shopify.com/s/files/1/1050/2604/products/Living.jpg?v=1505397146",
+				"https://cdn.shopify.com/s/files/1/1050/2604/products/Living.jpg?v=1505397146",
+				"https://cdn.shopify.com/s/files/1/1050/2604/products/Living.jpg?v=1505397146",
+				"https://cdn.shopify.com/s/files/1/1050/2604/products/Living.jpg?v=1505397146"
+			],
 		   "name": "Luxurious Apartment",
 		   "description": "Random description",
 		   "price": "195,000",
@@ -41,7 +61,12 @@
 		   "bathroom_count": 3
 		 },
 		 {
-		   "image_url": "https://cdn.shopify.com/s/files/1/1050/2604/products/Living.jpg?v=1505397146",
+		   "images": [
+				"https://cdn.shopify.com/s/files/1/1050/2604/products/Living.jpg?v=1505397146",
+				"https://cdn.shopify.com/s/files/1/1050/2604/products/Living.jpg?v=1505397146",
+				"https://cdn.shopify.com/s/files/1/1050/2604/products/Living.jpg?v=1505397146",
+				"https://cdn.shopify.com/s/files/1/1050/2604/products/Living.jpg?v=1505397146"
+			],
 		   "name": "Luxurious Apartment",
 		   "description": "Random description",
 		   "price": "195,000",
@@ -51,7 +76,12 @@
 		   "bathroom_count": 3
 		 },
 		 {
-		   "image_url": "https://cdn.shopify.com/s/files/1/1050/2604/products/Living.jpg?v=1505397146",
+		   "images": [
+				"https://cdn.shopify.com/s/files/1/1050/2604/products/Living.jpg?v=1505397146",
+				"https://cdn.shopify.com/s/files/1/1050/2604/products/Living.jpg?v=1505397146",
+				"https://cdn.shopify.com/s/files/1/1050/2604/products/Living.jpg?v=1505397146",
+				"https://cdn.shopify.com/s/files/1/1050/2604/products/Living.jpg?v=1505397146"
+			],
 		   "name": "Luxurious Apartment",
 		   "description": "Random description",
 		   "price": "195,000",

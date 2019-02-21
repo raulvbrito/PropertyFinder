@@ -12,7 +12,7 @@ public final class PropertyViewModel {
 
 	let property: Property
 	
-	let imageURL: URL?
+	let images: [String]
 	let name: String
 	let description: String
 	let price: String
@@ -25,7 +25,7 @@ public final class PropertyViewModel {
 	init(property: Property) {
 		self.property = property
 		
-		imageURL = property.imageURL
+		images = property.images
 		name = property.name
 		description = property.description
 		price = property.price

@@ -11,7 +11,7 @@ import Tailor
 
 struct Property: Mappable {
 	
-	var imageURL: URL?
+	var images: [String]!
 	var name: String!
 	var description: String!
 	var price: String!
@@ -21,7 +21,7 @@ struct Property: Mappable {
 	var bathroomCount: Int!
 	
 	init(_ map: JSONDictionary) {
-		imageURL <- map.property("image_url")
+		images <- map.property("images")
         name <- map.property("name")
         description <- map.property("description")
         price <- map.property("price")
