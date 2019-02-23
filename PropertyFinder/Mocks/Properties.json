@@ -8,8 +8,9 @@
 				"https://cdn.shopify.com/s/files/1/1050/2604/products/Living.jpg?v=1505397146"
 			],
 			"name": "High Floor Apartment",
-			"description": "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
-			"price": "195,000",
+			"description": "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo",
+			"rent_price": "195.000",
+			"buy_price": "3.450.000",
 			"type": "apartment",
 			"location": "Jumeirah Lake Towers, Dubai",
 			"bedroom_count": 5,
@@ -19,7 +20,7 @@
 			"area": 804,
 			"reference": "BHJLT-R-17599",
 			"rera": "1480584550",
-			"amenities": ["Study"]
+			"amenities": ["Study", "Private Pool", "View of Landmark", "Pets Allowed", "Networked"]
 		},
 		{
 			"images": [
@@ -30,7 +31,8 @@
 			],
 			"name": "Luxurious Apartment",
 			"description": "Random description",
-			"price": "195,000",
+			"rent_price": "195.000",
+			"buy_price": "3.450.000",
 			"type": "apartment",
 			"location": "Palm Jumeirah, Dubai",
 			"bedroom_count": 5,
@@ -40,7 +42,7 @@
 			"area": 804,
 			"reference": "BHJLT-R-17599",
 			"rera": "1480584550",
-			"amenities": ["Study"]
+			"amenities": ["Balcony", "Private Jacuzzi", "Private Garden"]
 		 },
 		 {
 			"images": [
@@ -51,7 +53,8 @@
 			],
 			"name": "Luxurious Apartment",
 			"description": "Random description",
-			"price": "195,000",
+			"rent_price": "195.000",
+			"buy_price": "3.450.000",
 			"type": "apartment",
 			"location": "Palm Jumeirah, Dubai",
 			"bedroom_count": 5,
@@ -61,7 +64,7 @@
 			"area": 804,
 			"reference": "BHJLT-R-17599",
 			"rera": "1480584550",
-			"amenities": ["Study"]
+			"amenities": ["Maid Service", "Covered Parking", "Built in Wardrobes", "Walk-in Closet",]
 		 },
 		 {
 			"images": [
@@ -72,7 +75,8 @@
 			],
 			"name": "Luxurious Apartment",
 			"description": "Random description",
-			"price": "195,000",
+			"rent_price": "195.000",
+			"buy_price": "3.450.000",
 			"type": "apartment",
 			"location": "Palm Jumeirah, Dubai",
 			"bedroom_count": 5,
@@ -82,7 +86,7 @@
 			"area": 804,
 			"reference": "BHJLT-R-17599",
 			"rera": "1480584550",
-			"amenities": ["Study"]
+			"amenities": ["Study", "Lobby in Building", "Children's Play Area", "Barbecue Area", "Vastu-compliant"]
 		 },
 		 {
 			"images": [
@@ -93,7 +97,8 @@
 			],
 			"name": "Luxurious Apartment",
 			"description": "Random description",
-			"price": "195,000",
+			"rent_price": "195.000",
+			"buy_price": "3.450.000",
 			"type": "apartment",
 			"location": "Palm Jumeirah, Dubai",
 			"bedroom_count": 5,
@@ -103,7 +108,7 @@
 			"area": 804,
 			"reference": "BHJLT-R-17599",
 			"rera": "1480584550",
-			"amenities": ["Study"]
+			"amenities": ["Shared Pool", "Security", "Kitchen Appliances", "View of Water"]
 		 },
 		 {
 			"images": [
@@ -114,7 +119,8 @@
 			],
 			"name": "Luxurious Apartment",
 			"description": "Random description",
-			"price": "195,000",
+			"rent_price": "195.000",
+			"buy_price": "3.450.000",
 			"type": "apartment",
 			"location": "Palm Jumeirah, Dubai",
 			"bedroom_count": 5,
@@ -124,7 +130,7 @@
 			"area": 804,
 			"reference": "BHJLT-R-17599",
 			"rera": "1480584550",
-			"amenities": ["Study"]
+			"amenities": ["Central A/C", "Shared Gym", "Shared Spa", "Concierge"]
 		 }
 	]
 }

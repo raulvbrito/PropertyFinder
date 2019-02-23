@@ -24,6 +24,8 @@ class BaseViewController: UIViewController {
 		self.tabBarController?.tabBar.layer.borderColor = UIColor.clear.cgColor
 		self.tabBarController?.tabBar.clipsToBounds = true
 		
+		self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
+		
 		definesPresentationContext = true
 		
 		if #available(iOS 11.0, *) {

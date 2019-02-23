@@ -15,14 +15,9 @@ class PropertyAmenitiesTableViewCell: UITableViewCell {
 	
 	var propertyViewModel: PropertyViewModel! {
 		didSet {
-			print(propertyViewModel.amenities)
+			tagListView.removeAllTags()
 			
-			for amenity in propertyViewModel.amenities {
-				print(amenity)
-				tagListView.addTag(amenity.rawValue)
-			}
-			
-//			tagListView.addTags(propertyViewModel?.amenities ?? [])
+			tagListView.addTags(propertyViewModel?.amenities ?? [])
 		}
 	}
 	

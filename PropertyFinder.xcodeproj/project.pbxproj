@@ -11,8 +11,13 @@
 		412BD5F92220565B0085AEC7 /* PlaceMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412BD5F82220565B0085AEC7 /* PlaceMarkerView.swift */; };
 		412BD5FA222060620085AEC7 /* PlaceMarkerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 412BD5F7222056370085AEC7 /* PlaceMarkerView.xib */; };
 		412BD5FC222064350085AEC7 /* PropertyDescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412BD5FB222064350085AEC7 /* PropertyDescriptionTableViewCell.swift */; };
+		415C5D20222103C700E8BB14 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415C5D1F222103C700E8BB14 /* FilterViewController.swift */; };
 		418FDA4722208CFA0096EB49 /* PropertyFactsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418FDA4622208CFA0096EB49 /* PropertyFactsTableViewCell.swift */; };
 		418FDA4922209A780096EB49 /* PropertyAmenitiesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418FDA4822209A780096EB49 /* PropertyAmenitiesTableViewCell.swift */; };
+		419E0F4F22211619002B175A /* TypeFilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419E0F4E22211619002B175A /* TypeFilterTableViewCell.swift */; };
+		419E0F5122219BD5002B175A /* AreaFilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419E0F5022219BD5002B175A /* AreaFilterTableViewCell.swift */; };
+		419E0F532221C5D5002B175A /* PriceFilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419E0F522221C5D5002B175A /* PriceFilterTableViewCell.swift */; };
+		419E0F552221C8E0002B175A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419E0F542221C8E0002B175A /* Extensions.swift */; };
 		41AE2689221F117700E58C84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AE2688221F117700E58C84 /* AppDelegate.swift */; };
 		41AE2690221F117700E58C84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41AE268E221F117700E58C84 /* Main.storyboard */; };
 		41AE2692221F117A00E58C84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41AE2691221F117A00E58C84 /* Assets.xcassets */; };
@@ -38,8 +43,13 @@
 		412BD5F7222056370085AEC7 /* PlaceMarkerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceMarkerView.xib; sourceTree = "<group>"; };
 		412BD5F82220565B0085AEC7 /* PlaceMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceMarkerView.swift; sourceTree = "<group>"; };
 		412BD5FB222064350085AEC7 /* PropertyDescriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyDescriptionTableViewCell.swift; sourceTree = "<group>"; };
+		415C5D1F222103C700E8BB14 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		418FDA4622208CFA0096EB49 /* PropertyFactsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyFactsTableViewCell.swift; sourceTree = "<group>"; };
 		418FDA4822209A780096EB49 /* PropertyAmenitiesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyAmenitiesTableViewCell.swift; sourceTree = "<group>"; };
+		419E0F4E22211619002B175A /* TypeFilterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeFilterTableViewCell.swift; sourceTree = "<group>"; };
+		419E0F5022219BD5002B175A /* AreaFilterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaFilterTableViewCell.swift; sourceTree = "<group>"; };
+		419E0F522221C5D5002B175A /* PriceFilterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceFilterTableViewCell.swift; sourceTree = "<group>"; };
+		419E0F542221C8E0002B175A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		41AE2685221F117700E58C84 /* PropertyFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PropertyFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41AE2688221F117700E58C84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41AE268F221F117700E58C84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -123,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				41AE26B5221F2D2800E58C84 /* BaseViewController.swift */,
+				415C5D1F222103C700E8BB14 /* FilterViewController.swift */,
 				41AE26BB221F8CC700E58C84 /* MyAccountViewController.swift */,
 				41AE26A2221F180200E58C84 /* PropertiesViewController.swift */,
 				41AE26BD221F9E6100E58C84 /* PropertyViewController.swift */,
@@ -135,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				41AE2688221F117700E58C84 /* AppDelegate.swift */,
+				419E0F542221C8E0002B175A /* Extensions.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -152,6 +164,8 @@
 		41AE26A6221F184100E58C84 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				419E0F5022219BD5002B175A /* AreaFilterTableViewCell.swift */,
+				419E0F522221C5D5002B175A /* PriceFilterTableViewCell.swift */,
 				418FDA4822209A780096EB49 /* PropertyAmenitiesTableViewCell.swift */,
 				412BD5FB222064350085AEC7 /* PropertyDescriptionTableViewCell.swift */,
 				418FDA4622208CFA0096EB49 /* PropertyFactsTableViewCell.swift */,
@@ -159,6 +173,7 @@
 				41AE26BF221FB54900E58C84 /* PropertyHeaderTableViewCell.swift */,
 				41AE26C3221FD4A000E58C84 /* PropertyLocationTableViewCell.swift */,
 				41AE26B7221F35AB00E58C84 /* PropertyTableViewCell.swift */,
+				419E0F4E22211619002B175A /* TypeFilterTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -319,6 +334,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-PropertyFinder/Pods-PropertyFinder-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/TTRangeSlider/TTRangeSlider.framework",
 				"${BUILT_PRODUCTS_DIR}/TagListView/TagListView.framework",
 				"${BUILT_PRODUCTS_DIR}/Tailor/Tailor.framework",
 			);
@@ -328,6 +344,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TTRangeSlider.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TagListView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Tailor.framework",
 			);
@@ -365,19 +382,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				419E0F552221C8E0002B175A /* Extensions.swift in Sources */,
 				41AE2689221F117700E58C84 /* AppDelegate.swift in Sources */,
 				41AE26AD221F221C00E58C84 /* BaseService.swift in Sources */,
 				41AE26BC221F8CC700E58C84 /* MyAccountViewController.swift in Sources */,
+				419E0F532221C5D5002B175A /* PriceFilterTableViewCell.swift in Sources */,
+				419E0F4F22211619002B175A /* TypeFilterTableViewCell.swift in Sources */,
 				418FDA4722208CFA0096EB49 /* PropertyFactsTableViewCell.swift in Sources */,
 				41AE26A0221F163C00E58C84 /* PropertyViewModel.swift in Sources */,
 				41AE26AA221F1E6700E58C84 /* Property.swift in Sources */,
 				41AE26AF221F226700E58C84 /* PropertyService.swift in Sources */,
 				41AE26BA221F8C4400E58C84 /* SavedPropertiesViewController.swift in Sources */,
+				419E0F5122219BD5002B175A /* AreaFilterTableViewCell.swift in Sources */,
 				41AE26B6221F2D2800E58C84 /* BaseViewController.swift in Sources */,
 				41AE26BE221F9E6100E58C84 /* PropertyViewController.swift in Sources */,
 				41AE26B8221F35AB00E58C84 /* PropertyTableViewCell.swift in Sources */,
 				41AE26C4221FD4A000E58C84 /* PropertyLocationTableViewCell.swift in Sources */,
 				41AE26C0221FB54900E58C84 /* PropertyHeaderTableViewCell.swift in Sources */,
+				415C5D20222103C700E8BB14 /* FilterViewController.swift in Sources */,
 				412BD5F92220565B0085AEC7 /* PlaceMarkerView.swift in Sources */,
 				418FDA4922209A780096EB49 /* PropertyAmenitiesTableViewCell.swift in Sources */,
 				412BD5FC222064350085AEC7 /* PropertyDescriptionTableViewCell.swift in Sources */,

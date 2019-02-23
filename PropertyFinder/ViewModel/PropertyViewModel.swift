@@ -43,7 +43,8 @@ public final class PropertyViewModel {
 	let images: [String]
 	let name: String
 	let description: String
-	let price: String
+	let rentPrice: String
+	let buyPrice: String
 	let type: String
 	let location: String
 	var coordinates: CLLocationCoordinate2D
@@ -61,7 +62,8 @@ public final class PropertyViewModel {
 		images = property.images
 		name = property.name
 		description = property.description
-		price = property.price
+		rentPrice = property.rentPrice
+		buyPrice = property.buyPrice
 		type = property.type
 		location = property.location
 		coordinates = property.coordinates

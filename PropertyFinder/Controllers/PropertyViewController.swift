@@ -46,12 +46,14 @@ extension PropertyViewController: UITableViewDelegate, UITableViewDataSource {
 		switch indexPath.row {
 			case 0:
 				return 300
-			case 1, 4:
+			case 1:
 				return 150
 			case 2:
 				return UITableView.automaticDimension
 			case 3:
 				return 200
+			case 4:
+				return 110
 			default:
 				return 0
 		}

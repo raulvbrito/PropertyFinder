@@ -51,6 +51,10 @@ class PropertiesViewController: BaseViewController {
 		searchController.searchResultsUpdater = self as UISearchResultsUpdating
 		searchController.searchBar.placeholder = "Search"
 		searchController.searchBar.setValue("Cancel", forKey:"_cancelButtonText")
+		searchController.searchBar.searchBarStyle = UISearchBar.Style.minimal
+		searchController.searchBar.backgroundImage = UIImage()
+		searchController.searchBar.tintColor = UIColor(red: 237/255, green: 79/255, blue: 63/255, alpha: 1)
+		searchController.searchBar.barTintColor = .clear
 		
 		if #available(iOS 11.0, *) {
 			searchController.obscuresBackgroundDuringPresentation = false
@@ -72,6 +76,11 @@ class PropertiesViewController: BaseViewController {
 		})
 
 		tableView.reloadData()
+	}
+	
+	@objc func filter(sender: UIButton) {
+		UISelectionFeedbackGenerator().selectionChanged()
+		performSegue(withIdentifier: "FilterSegue", sender: nil)
 	}
 	
 	
@@ -100,6 +109,39 @@ extension PropertiesViewController: UITableViewDelegate, UITableViewDataSource {
 	
 	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 		return 258
+	}
+	
+	func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+		return 40
+	}
+	
+	func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+		let headerView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 40))
+
+		let label = UILabel(frame: CGRect(x: 16, y: 0, width: view.frame.size.width, height: 40))
+		label.text = "\(propertyViewModels.count) properties found"
+		label.font = UIFont.systemFont(ofSize: 16, weight: .medium)
+		label.textColor = .darkGray
+		
+		let filterButton = UIButton(frame: CGRect(x: view.frame.size.width - 50, y: 6, width: 25, height: 25))
+		filterButton.setTitle("", for: .normal)
+		filterButton.showsTouchWhenHighlighted = true
+		filterButton.setTitleColor(.darkGray, for: .normal)
+		filterButton.setTitleColor(.lightGray, for: .selected)
+		filterButton.titleLabel?.font = UIFont.systemFont(ofSize: 14, weight: .semibold)
+		filterButton.tintColor = .darkGray
+		
+		let filterIconImage = UIImage(named: "filter_icon")
+		let tintedImage = filterIconImage?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
+		filterButton.setImage(tintedImage, for: .normal)
+		
+		filterButton.addTarget(self, action: #selector(PropertiesViewController.filter(sender:)), for: .touchUpInside)
+
+		headerView.backgroundColor = .white
+		headerView.addSubview(label)
+		headerView.addSubview(filterButton)
+
+		return headerView
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

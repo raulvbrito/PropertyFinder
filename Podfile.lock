@@ -10,6 +10,7 @@ PODS:
   - SDWebImage/Core (4.4.5)
   - TagListView (1.3.2)
   - Tailor (3.0.0)
+  - TTRangeSlider (1.0.6)
 
 DEPENDENCIES:
   - GoogleMaps
@@ -17,6 +18,7 @@ DEPENDENCIES:
   - SDWebImage
   - TagListView
   - Tailor
+  - TTRangeSlider
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -25,6 +27,7 @@ SPEC REPOS:
     - SDWebImage
     - TagListView
     - Tailor
+    - TTRangeSlider
 
 SPEC CHECKSUMS:
   GoogleMaps: 941cd655e009b4d8e42df19a3d749bc3fccec973
@@ -32,7 +35,8 @@ SPEC CHECKSUMS:
   SDWebImage: ecc03494e973b93b80213649d32175f8d2d17d4d
   TagListView: 0c7e9c26b9aff858224ee6b155f5fcacd9e27c83
   Tailor: 4fb574e8815d076abbf2bd7ffdbf4b14103fe17c
+  TTRangeSlider: 78188bea83f6471a06f75adbc88da5e990baeafe
 
-PODFILE CHECKSUM: b7c45e0d5ba65149fa6a6b80e62a7ed4d732f6dc
+PODFILE CHECKSUM: ae54c269eaba18cf7dc133ed11d2040ffee9efe8
 
 COCOAPODS: 1.5.3

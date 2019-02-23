@@ -11,5 +11,6 @@ target 'PropertyFinder' do
   pod 'SDWebImage'
   pod 'TagListView'
   pod 'Tailor'
+  pod 'TTRangeSlider'
   
 end

@@ -15,7 +15,8 @@ struct Property: Mappable {
 	var images: [String]!
 	var name: String!
 	var description: String!
-	var price: String!
+	var rentPrice: String!
+	var buyPrice: String!
 	var type: String!
 	var location: String!
 	var latitude: Double!
@@ -36,7 +37,8 @@ struct Property: Mappable {
 		images <- map.property("images")
         name <- map.property("name")
         description <- map.property("description")
-        price <- map.property("price")
+        rentPrice <- map.property("rent_price")
+        buyPrice <- map.property("buy_price")
         type <- map.property("type")
         location <- map.property("location")
         latitude <- map.property("latitude")

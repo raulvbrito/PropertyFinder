@@ -21,7 +21,7 @@ class PropertyTableViewCell: UITableViewCell {
 			
 			titleLabel.text = propertyViewModel.name
 			typeLabel.text = propertyViewModel.type.capitalized
-			priceLabel.text = "\(propertyViewModel.price) AED/year"
+			priceLabel.text = "\(propertyViewModel.rentPrice) AED/year"
 			locationLabel.text = propertyViewModel.location
 		}
 	}
