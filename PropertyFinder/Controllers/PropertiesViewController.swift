@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Hero
 
 class PropertiesViewController: BaseViewController {
 	
@@ -39,7 +40,9 @@ class PropertiesViewController: BaseViewController {
 				return
 			}
 			
+			self.tableView.hero.modifiers = [.cascade]
 			self.propertyViewModels = properties.map({return PropertyViewModel(property: $0)})
+			
 			self.tableView.reloadData()
 		}
 	}
@@ -70,6 +73,15 @@ class PropertiesViewController: BaseViewController {
 
 		tableView.reloadData()
 	}
+	
+	
+	// MARK: - Navigation
+	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		if let propertyVC = segue.destination as? PropertyViewController {
+			propertyVC.propertyViewModel = sender as? PropertyViewModel
+        }
+	}
 
 }
 
@@ -87,7 +99,7 @@ extension PropertiesViewController: UITableViewDelegate, UITableViewDataSource {
 	}
 	
 	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-		return 256
+		return 258
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -99,11 +111,20 @@ extension PropertiesViewController: UITableViewDelegate, UITableViewDataSource {
 			cell?.propertyViewModel = propertyViewModels[indexPath.row]
 		}
 		
+		cell?.selectionStyle = .none
+		cell?.selectedBackgroundView = UIView()
+		
 		return cell ?? UITableViewCell()
 	}
 	
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		tableView.deselectRow(at: indexPath, animated: true)
+		
+		if isFiltering() {
+			performSegue(withIdentifier: "PropertySegue", sender: filteredPropertyViewModels[indexPath.row])
+		} else {
+			performSegue(withIdentifier: "PropertySegue", sender: propertyViewModels[indexPath.row])
+		}
 	}
 }
 

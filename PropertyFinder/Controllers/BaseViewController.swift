@@ -13,9 +13,12 @@ class BaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 		
+		self.navigationController?.navigationBar.barStyle = UIBarStyle.default
+		self.navigationController?.navigationBar.tintColor = UIColor.black
 		self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
 		self.navigationController?.navigationBar.shadowImage = UIImage()
 		self.navigationController?.navigationBar.isTranslucent = false
+		self.navigationController?.view.backgroundColor = .white
 		
 		self.tabBarController?.tabBar.layer.borderWidth = 0.50
 		self.tabBarController?.tabBar.layer.borderColor = UIColor.clear.cgColor

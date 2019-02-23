@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		00DCEB2B9C02C7DD743A35CA /* Pods_PropertyFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC55F250B90CDEE86AACFBEC /* Pods_PropertyFinder.framework */; };
+		412BD5F92220565B0085AEC7 /* PlaceMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412BD5F82220565B0085AEC7 /* PlaceMarkerView.swift */; };
+		412BD5FA222060620085AEC7 /* PlaceMarkerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 412BD5F7222056370085AEC7 /* PlaceMarkerView.xib */; };
+		412BD5FC222064350085AEC7 /* PropertyDescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412BD5FB222064350085AEC7 /* PropertyDescriptionTableViewCell.swift */; };
+		418FDA4722208CFA0096EB49 /* PropertyFactsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418FDA4622208CFA0096EB49 /* PropertyFactsTableViewCell.swift */; };
+		418FDA4922209A780096EB49 /* PropertyAmenitiesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418FDA4822209A780096EB49 /* PropertyAmenitiesTableViewCell.swift */; };
 		41AE2689221F117700E58C84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AE2688221F117700E58C84 /* AppDelegate.swift */; };
 		41AE2690221F117700E58C84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41AE268E221F117700E58C84 /* Main.storyboard */; };
 		41AE2692221F117A00E58C84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41AE2691221F117A00E58C84 /* Assets.xcassets */; };
@@ -20,10 +25,21 @@
 		41AE26B4221F288100E58C84 /* Properties.json in Resources */ = {isa = PBXBuildFile; fileRef = 41AE26B3221F288100E58C84 /* Properties.json */; };
 		41AE26B6221F2D2800E58C84 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AE26B5221F2D2800E58C84 /* BaseViewController.swift */; };
 		41AE26B8221F35AB00E58C84 /* PropertyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AE26B7221F35AB00E58C84 /* PropertyTableViewCell.swift */; };
+		41AE26BA221F8C4400E58C84 /* SavedPropertiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AE26B9221F8C4400E58C84 /* SavedPropertiesViewController.swift */; };
+		41AE26BC221F8CC700E58C84 /* MyAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AE26BB221F8CC700E58C84 /* MyAccountViewController.swift */; };
+		41AE26BE221F9E6100E58C84 /* PropertyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AE26BD221F9E6100E58C84 /* PropertyViewController.swift */; };
+		41AE26C0221FB54900E58C84 /* PropertyHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AE26BF221FB54900E58C84 /* PropertyHeaderTableViewCell.swift */; };
+		41AE26C2221FBC7800E58C84 /* PropertyGalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AE26C1221FBC7800E58C84 /* PropertyGalleryCollectionViewCell.swift */; };
+		41AE26C4221FD4A000E58C84 /* PropertyLocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AE26C3221FD4A000E58C84 /* PropertyLocationTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0CE59C0BC3C8FB29DB444B80 /* Pods-PropertyFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PropertyFinder.release.xcconfig"; path = "Pods/Target Support Files/Pods-PropertyFinder/Pods-PropertyFinder.release.xcconfig"; sourceTree = "<group>"; };
+		412BD5F7222056370085AEC7 /* PlaceMarkerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceMarkerView.xib; sourceTree = "<group>"; };
+		412BD5F82220565B0085AEC7 /* PlaceMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceMarkerView.swift; sourceTree = "<group>"; };
+		412BD5FB222064350085AEC7 /* PropertyDescriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyDescriptionTableViewCell.swift; sourceTree = "<group>"; };
+		418FDA4622208CFA0096EB49 /* PropertyFactsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyFactsTableViewCell.swift; sourceTree = "<group>"; };
+		418FDA4822209A780096EB49 /* PropertyAmenitiesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyAmenitiesTableViewCell.swift; sourceTree = "<group>"; };
 		41AE2685221F117700E58C84 /* PropertyFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PropertyFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41AE2688221F117700E58C84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41AE268F221F117700E58C84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -38,6 +54,12 @@
 		41AE26B3221F288100E58C84 /* Properties.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Properties.json; sourceTree = "<group>"; };
 		41AE26B5221F2D2800E58C84 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		41AE26B7221F35AB00E58C84 /* PropertyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyTableViewCell.swift; sourceTree = "<group>"; };
+		41AE26B9221F8C4400E58C84 /* SavedPropertiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedPropertiesViewController.swift; sourceTree = "<group>"; };
+		41AE26BB221F8CC700E58C84 /* MyAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountViewController.swift; sourceTree = "<group>"; };
+		41AE26BD221F9E6100E58C84 /* PropertyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyViewController.swift; sourceTree = "<group>"; };
+		41AE26BF221FB54900E58C84 /* PropertyHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		41AE26C1221FBC7800E58C84 /* PropertyGalleryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyGalleryCollectionViewCell.swift; sourceTree = "<group>"; };
+		41AE26C3221FD4A000E58C84 /* PropertyLocationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyLocationTableViewCell.swift; sourceTree = "<group>"; };
 		7773439B0CBE2D4ABDA18634 /* Pods-PropertyFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PropertyFinder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PropertyFinder/Pods-PropertyFinder.debug.xcconfig"; sourceTree = "<group>"; };
 		CC55F250B90CDEE86AACFBEC /* Pods_PropertyFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PropertyFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -101,7 +123,10 @@
 			isa = PBXGroup;
 			children = (
 				41AE26B5221F2D2800E58C84 /* BaseViewController.swift */,
+				41AE26BB221F8CC700E58C84 /* MyAccountViewController.swift */,
 				41AE26A2221F180200E58C84 /* PropertiesViewController.swift */,
+				41AE26BD221F9E6100E58C84 /* PropertyViewController.swift */,
+				41AE26B9221F8C4400E58C84 /* SavedPropertiesViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -118,6 +143,8 @@
 			isa = PBXGroup;
 			children = (
 				41AE26A6221F184100E58C84 /* Cells */,
+				412BD5F7222056370085AEC7 /* PlaceMarkerView.xib */,
+				412BD5F82220565B0085AEC7 /* PlaceMarkerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -125,6 +152,12 @@
 		41AE26A6221F184100E58C84 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				418FDA4822209A780096EB49 /* PropertyAmenitiesTableViewCell.swift */,
+				412BD5FB222064350085AEC7 /* PropertyDescriptionTableViewCell.swift */,
+				418FDA4622208CFA0096EB49 /* PropertyFactsTableViewCell.swift */,
+				41AE26C1221FBC7800E58C84 /* PropertyGalleryCollectionViewCell.swift */,
+				41AE26BF221FB54900E58C84 /* PropertyHeaderTableViewCell.swift */,
+				41AE26C3221FD4A000E58C84 /* PropertyLocationTableViewCell.swift */,
 				41AE26B7221F35AB00E58C84 /* PropertyTableViewCell.swift */,
 			);
 			path = Cells;
@@ -193,6 +226,7 @@
 				41AE2682221F117700E58C84 /* Frameworks */,
 				41AE2683221F117700E58C84 /* Resources */,
 				9D63C9870B020A7288D362EA /* [CP] Embed Pods Frameworks */,
+				F5C59E3EB368C3CC987BF799 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -244,6 +278,7 @@
 				41AE26B4221F288100E58C84 /* Properties.json in Resources */,
 				41AE2695221F117A00E58C84 /* LaunchScreen.storyboard in Resources */,
 				41AE2692221F117A00E58C84 /* Assets.xcassets in Resources */,
+				412BD5FA222060620085AEC7 /* PlaceMarkerView.xib in Resources */,
 				41AE2690221F117700E58C84 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,19 +317,45 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-PropertyFinder/Pods-PropertyFinder-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/TagListView/TagListView.framework",
 				"${BUILT_PRODUCTS_DIR}/Tailor/Tailor.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TagListView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Tailor.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PropertyFinder/Pods-PropertyFinder-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F5C59E3EB368C3CC987BF799 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PropertyFinder/Pods-PropertyFinder-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PropertyFinder/Pods-PropertyFinder-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -306,11 +367,21 @@
 			files = (
 				41AE2689221F117700E58C84 /* AppDelegate.swift in Sources */,
 				41AE26AD221F221C00E58C84 /* BaseService.swift in Sources */,
+				41AE26BC221F8CC700E58C84 /* MyAccountViewController.swift in Sources */,
+				418FDA4722208CFA0096EB49 /* PropertyFactsTableViewCell.swift in Sources */,
 				41AE26A0221F163C00E58C84 /* PropertyViewModel.swift in Sources */,
 				41AE26AA221F1E6700E58C84 /* Property.swift in Sources */,
 				41AE26AF221F226700E58C84 /* PropertyService.swift in Sources */,
+				41AE26BA221F8C4400E58C84 /* SavedPropertiesViewController.swift in Sources */,
 				41AE26B6221F2D2800E58C84 /* BaseViewController.swift in Sources */,
+				41AE26BE221F9E6100E58C84 /* PropertyViewController.swift in Sources */,
 				41AE26B8221F35AB00E58C84 /* PropertyTableViewCell.swift in Sources */,
+				41AE26C4221FD4A000E58C84 /* PropertyLocationTableViewCell.swift in Sources */,
+				41AE26C0221FB54900E58C84 /* PropertyHeaderTableViewCell.swift in Sources */,
+				412BD5F92220565B0085AEC7 /* PlaceMarkerView.swift in Sources */,
+				418FDA4922209A780096EB49 /* PropertyAmenitiesTableViewCell.swift in Sources */,
+				412BD5FC222064350085AEC7 /* PropertyDescriptionTableViewCell.swift in Sources */,
+				41AE26C2221FBC7800E58C84 /* PropertyGalleryCollectionViewCell.swift in Sources */,
 				41AE26A3221F180200E58C84 /* PropertiesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

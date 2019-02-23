@@ -8,6 +8,7 @@
 
 import Foundation
 import Tailor
+import CoreLocation
 
 struct Property: Mappable {
 	
@@ -17,8 +18,19 @@ struct Property: Mappable {
 	var price: String!
 	var type: String!
 	var location: String!
+	var latitude: Double!
+	var longitude: Double!
+	var coordinates: CLLocationCoordinate2D! {
+		get {
+			return CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+		}
+	}
 	var bedroomCount: Int!
 	var bathroomCount: Int!
+	var area: Int!
+	var reference: String!
+	var rera: String!
+	var amenities: [String]!
 	
 	init(_ map: JSONDictionary) {
 		images <- map.property("images")
@@ -27,8 +39,14 @@ struct Property: Mappable {
         price <- map.property("price")
         type <- map.property("type")
         location <- map.property("location")
+        latitude <- map.property("latitude")
+        longitude <- map.property("longitude")
 		bedroomCount <- map.property("bedroom_count")
 		bathroomCount <- map.property("bathroom_count")
+		area <- map.property("area")
+		reference <- map.property("reference")
+		rera <- map.property("rera")
+		amenities <- map.property("amenities")
 	}
 	
 }

@@ -8,87 +8,123 @@
 				"https://cdn.shopify.com/s/files/1/1050/2604/products/Living.jpg?v=1505397146"
 			],
 			"name": "High Floor Apartment",
-			"description": "Random description",
+			"description": "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
 			"price": "195,000",
 			"type": "apartment",
 			"location": "Jumeirah Lake Towers, Dubai",
 			"bedroom_count": 5,
-			"bathroom_count": 3
+			"bathroom_count": 3,
+			"latitude": 25.066843,
+			"longitude": 55.1398858,
+			"area": 804,
+			"reference": "BHJLT-R-17599",
+			"rera": "1480584550",
+			"amenities": ["Study"]
 		},
 		{
-		   "images": [
+			"images": [
 				"https://cdn.shopify.com/s/files/1/1050/2604/products/Living.jpg?v=1505397146",
 				"https://cdn.shopify.com/s/files/1/1050/2604/products/Living.jpg?v=1505397146",
 				"https://cdn.shopify.com/s/files/1/1050/2604/products/Living.jpg?v=1505397146",
 				"https://cdn.shopify.com/s/files/1/1050/2604/products/Living.jpg?v=1505397146"
 			],
-		   "name": "Luxurious Apartment",
-		   "description": "Random description",
-		   "price": "195,000",
-		   "type": "apartment",
-		   "location": "Palm Jumeirah, Dubai",
-		   "bedroom_count": 5,
-		   "bathroom_count": 3
+			"name": "Luxurious Apartment",
+			"description": "Random description",
+			"price": "195,000",
+			"type": "apartment",
+			"location": "Palm Jumeirah, Dubai",
+			"bedroom_count": 5,
+			"bathroom_count": 3,
+			"latitude": -23.5688841,
+			"longitude": -46.6145877,
+			"area": 804,
+			"reference": "BHJLT-R-17599",
+			"rera": "1480584550",
+			"amenities": ["Study"]
 		 },
 		 {
-		   "images": [
+			"images": [
 				"https://cdn.shopify.com/s/files/1/1050/2604/products/Living.jpg?v=1505397146",
 				"https://cdn.shopify.com/s/files/1/1050/2604/products/Living.jpg?v=1505397146",
 				"https://cdn.shopify.com/s/files/1/1050/2604/products/Living.jpg?v=1505397146",
 				"https://cdn.shopify.com/s/files/1/1050/2604/products/Living.jpg?v=1505397146"
 			],
-		   "name": "Luxurious Apartment",
-		   "description": "Random description",
-		   "price": "195,000",
-		   "type": "apartment",
-		   "location": "Palm Jumeirah, Dubai",
-		   "bedroom_count": 5,
-		   "bathroom_count": 3
+			"name": "Luxurious Apartment",
+			"description": "Random description",
+			"price": "195,000",
+			"type": "apartment",
+			"location": "Palm Jumeirah, Dubai",
+			"bedroom_count": 5,
+			"bathroom_count": 3,
+			"latitude": -23.5688841,
+			"longitude": -46.6145877,
+			"area": 804,
+			"reference": "BHJLT-R-17599",
+			"rera": "1480584550",
+			"amenities": ["Study"]
 		 },
 		 {
-		   "images": [
+			"images": [
 				"https://cdn.shopify.com/s/files/1/1050/2604/products/Living.jpg?v=1505397146",
 				"https://cdn.shopify.com/s/files/1/1050/2604/products/Living.jpg?v=1505397146",
 				"https://cdn.shopify.com/s/files/1/1050/2604/products/Living.jpg?v=1505397146",
 				"https://cdn.shopify.com/s/files/1/1050/2604/products/Living.jpg?v=1505397146"
 			],
-		   "name": "Luxurious Apartment",
-		   "description": "Random description",
-		   "price": "195,000",
-		   "type": "apartment",
-		   "location": "Palm Jumeirah, Dubai",
-		   "bedroom_count": 5,
-		   "bathroom_count": 3
+			"name": "Luxurious Apartment",
+			"description": "Random description",
+			"price": "195,000",
+			"type": "apartment",
+			"location": "Palm Jumeirah, Dubai",
+			"bedroom_count": 5,
+			"bathroom_count": 3,
+			"latitude": -23.5688841,
+			"longitude": -46.6145877,
+			"area": 804,
+			"reference": "BHJLT-R-17599",
+			"rera": "1480584550",
+			"amenities": ["Study"]
 		 },
 		 {
-		   "images": [
+			"images": [
 				"https://cdn.shopify.com/s/files/1/1050/2604/products/Living.jpg?v=1505397146",
 				"https://cdn.shopify.com/s/files/1/1050/2604/products/Living.jpg?v=1505397146",
 				"https://cdn.shopify.com/s/files/1/1050/2604/products/Living.jpg?v=1505397146",
 				"https://cdn.shopify.com/s/files/1/1050/2604/products/Living.jpg?v=1505397146"
 			],
-		   "name": "Luxurious Apartment",
-		   "description": "Random description",
-		   "price": "195,000",
-		   "type": "apartment",
-		   "location": "Palm Jumeirah, Dubai",
-		   "bedroom_count": 5,
-		   "bathroom_count": 3
+			"name": "Luxurious Apartment",
+			"description": "Random description",
+			"price": "195,000",
+			"type": "apartment",
+			"location": "Palm Jumeirah, Dubai",
+			"bedroom_count": 5,
+			"bathroom_count": 3,
+			"latitude": -23.5688841,
+			"longitude": -46.6145877,
+			"area": 804,
+			"reference": "BHJLT-R-17599",
+			"rera": "1480584550",
+			"amenities": ["Study"]
 		 },
 		 {
-		   "images": [
+			"images": [
 				"https://cdn.shopify.com/s/files/1/1050/2604/products/Living.jpg?v=1505397146",
 				"https://cdn.shopify.com/s/files/1/1050/2604/products/Living.jpg?v=1505397146",
 				"https://cdn.shopify.com/s/files/1/1050/2604/products/Living.jpg?v=1505397146",
 				"https://cdn.shopify.com/s/files/1/1050/2604/products/Living.jpg?v=1505397146"
 			],
-		   "name": "Luxurious Apartment",
-		   "description": "Random description",
-		   "price": "195,000",
-		   "type": "apartment",
-		   "location": "Palm Jumeirah, Dubai",
-		   "bedroom_count": 5,
-		   "bathroom_count": 3
+			"name": "Luxurious Apartment",
+			"description": "Random description",
+			"price": "195,000",
+			"type": "apartment",
+			"location": "Palm Jumeirah, Dubai",
+			"bedroom_count": 5,
+			"bathroom_count": 3,
+			"latitude": -23.5688841,
+			"longitude": -46.6145877,
+			"area": 804,
+			"reference": "BHJLT-R-17599",
+			"rera": "1480584550",
+			"amenities": ["Study"]
 		 }
 	]
 }

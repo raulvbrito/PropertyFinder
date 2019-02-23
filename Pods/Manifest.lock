@@ -1,22 +1,38 @@
 PODS:
+  - GoogleMaps (3.0.2):
+    - GoogleMaps/Maps (= 3.0.2)
+  - GoogleMaps/Base (3.0.2)
+  - GoogleMaps/Maps (3.0.2):
+    - GoogleMaps/Base
+  - Hero (1.4.0)
   - SDWebImage (4.4.5):
     - SDWebImage/Core (= 4.4.5)
   - SDWebImage/Core (4.4.5)
+  - TagListView (1.3.2)
   - Tailor (3.0.0)
 
 DEPENDENCIES:
+  - GoogleMaps
+  - Hero
   - SDWebImage
+  - TagListView
   - Tailor
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - GoogleMaps
+    - Hero
     - SDWebImage
+    - TagListView
     - Tailor
 
 SPEC CHECKSUMS:
+  GoogleMaps: 941cd655e009b4d8e42df19a3d749bc3fccec973
+  Hero: bac92350d7201a1a940003e0767c7b52ce7c99a1
   SDWebImage: ecc03494e973b93b80213649d32175f8d2d17d4d
+  TagListView: 0c7e9c26b9aff858224ee6b155f5fcacd9e27c83
   Tailor: 4fb574e8815d076abbf2bd7ffdbf4b14103fe17c
 
-PODFILE CHECKSUM: 26c0bba55e104220d4f80c07bb37f63e158c158a
+PODFILE CHECKSUM: b7c45e0d5ba65149fa6a6b80e62a7ed4d732f6dc
 
 COCOAPODS: 1.5.3

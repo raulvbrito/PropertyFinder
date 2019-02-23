@@ -6,7 +6,10 @@ target 'PropertyFinder' do
   use_frameworks!
 
   # Pods for PropertyFinder
+  pod 'GoogleMaps'
+  pod 'Hero'
   pod 'SDWebImage'
+  pod 'TagListView'
   pod 'Tailor'
   
 end
