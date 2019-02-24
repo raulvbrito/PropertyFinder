@@ -21,17 +21,18 @@ struct Property: Mappable {
 	var location: String!
 	var latitude: Double!
 	var longitude: Double!
+	var bedroomCount: Int!
+	var bathroomCount: Int!
+	var area: Float!
+	var furnishings: Bool!
+	var reference: String!
+	var rera: String!
+	var amenities: [String]!
 	var coordinates: CLLocationCoordinate2D! {
 		get {
 			return CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
 		}
 	}
-	var bedroomCount: Int!
-	var bathroomCount: Int!
-	var area: Float!
-	var reference: String!
-	var rera: String!
-	var amenities: [String]!
 	
 	init(_ map: JSONDictionary) {
 		images <- map.property("images")
@@ -46,6 +47,7 @@ struct Property: Mappable {
 		bedroomCount <- map.property("bedroom_count")
 		bathroomCount <- map.property("bathroom_count")
 		area <- map.property("area")
+		furnishings <- map.property("furnishings")
 		reference <- map.property("reference")
 		rera <- map.property("rera")
 		amenities <- map.property("amenities")

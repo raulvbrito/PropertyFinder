@@ -20,6 +20,6 @@ class MyAccountViewController: BaseViewController {
 	// MARK: - Methods
 	
 	@IBAction func githubProject(_ sender: UIButton) {
-		UIApplication.shared.open(URL(string: "https://github.com/raulvbrito/PropertyFinder.git")!, options: [:], completionHandler: nil)
+		UIApplication.shared.open(URL(string: sender.titleLabel?.text ?? "")!, options: [:], completionHandler: nil)
 	}
 }

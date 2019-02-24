@@ -12,24 +12,24 @@ import TagListView
 
 struct Filter: Mappable {
 	
-	var propertyTypes: [TagView]!
+	var propertyTypes: [String]!
 	var minArea: Float!
 	var maxArea: Float!
 	var minBedrooms: Int!
 	var maxBedrooms: Int!
-	var furnishing: Bool!
+	var furnishings: Bool!
 	var minPrice: Float!
 	var maxPrice: Float!
 	
 	init(_ map: JSONDictionary) {
-		propertyTypes <- map.property("propertyTypes")
-		minArea <- map.property("minArea")
-		maxArea <- map.property("maxArea")
-		minBedrooms <- map.property("minBedrooms")
-		maxBedrooms <- map.property("maxBedrooms")
-		furnishing <- map.property("furnishing")
-		minPrice <- map.property("minPrice")
-		maxPrice <- map.property("maxPrice")
+		propertyTypes <- map.property("property_types")
+		minArea <- map.property("min_area")
+		maxArea <- map.property("max_area")
+		minBedrooms <- map.property("min_bedrooms")
+		maxBedrooms <- map.property("max_bedrooms")
+		furnishings <- map.property("furnishings")
+		minPrice <- map.property("min_price")
+		maxPrice <- map.property("max_price")
 	}
 	
 }

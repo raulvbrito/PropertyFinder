@@ -15,33 +15,28 @@ class SavedPropertiesViewController: BaseViewController {
 	
 	var propertyViewModels = [PropertyViewModel]()
 	
-	@IBOutlet var tableView: UITableView!
+	@IBOutlet var tableView: UITableView! {
+		didSet {
+			PropertyService.fecthProperties { (error, properties) in
+				if let error = error {
+					print(error.domain)
+					return
+				}
+				
+				self.tableView.hero.modifiers = [.cascade]
+				self.propertyViewModels = properties.map({return PropertyViewModel(property: $0)})
+				
+				self.tableView.reloadData()
+			}
+		}
+	}
 	
 	
 	// MARK: - ViewController Lifecycle
 	
     override func viewDidLoad() {
         super.viewDidLoad()
-		
-		fetchData()
     }
-	
-	
-	// MARK: - Methods
-	
-	@objc func fetchData() {
-		PropertyService.fecthProperties { (error, properties) in
-			if let error = error {
-				print(error.domain)
-				return
-			}
-			
-			self.tableView.hero.modifiers = [.cascade]
-			self.propertyViewModels = properties.map({return PropertyViewModel(property: $0)})
-			
-			self.tableView.reloadData()
-		}
-	}
 	
 	
 	// MARK: - Navigation

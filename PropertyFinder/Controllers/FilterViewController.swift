@@ -8,10 +8,9 @@
 
 import UIKit
 import TagListView
-import TTRangeSlider
 
 protocol FilterViewControllerDelegate {
-     func filter(by parameters: Filter)
+     func filterContent(by parameters: Filter)
 }
 
 class FilterViewController: UIViewController {
@@ -55,15 +54,22 @@ class FilterViewController: UIViewController {
 	}
 	
 	@IBAction func filter(_ sender: UIButton) {
-//		let typeTableViewCell = tableView.cellForRow(at: IndexPath(row: 0, section: 1)) as? TypeFilterTableViewCell
+		let typeTableViewCell = tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as? TypeFilterTableViewCell
 		let areaTableViewCell = tableView.cellForRow(at: IndexPath(row: 0, section: 1)) as? AreaFilterTableViewCell
+		let priceTableViewCell = tableView.cellForRow(at: IndexPath(row: 0, section: 2)) as? PriceFilterTableViewCell
 		
-//		parameters.propertyTypes(typeTableViewCell?.tagListView.selectedTags())
-		parameters.minBedrooms = Int(areaTableViewCell?.minBedroomCountLabel.text ?? "0")
+		parameters.propertyTypes = typeTableViewCell?.tagListView.selectedTags().map({return $0.currentTitle ?? ""})
+		parameters.minArea = areaTableViewCell?.rangeSlider.selectedMinimum
+		parameters.maxArea = areaTableViewCell?.rangeSlider.selectedMaximum
 		parameters.maxBedrooms = Int(areaTableViewCell?.minBedroomCountLabel.text ?? "7")
-		parameters.furnishing = areaTableViewCell?.furnishingsSwitch.isOn
+		parameters.minBedrooms = Int(areaTableViewCell?.minBedroomCountLabel.text ?? "0")
+		parameters.maxBedrooms = Int(areaTableViewCell?.maxBedroomCountLabel.text ?? "7")
+		parameters.furnishings = areaTableViewCell?.furnishingsSwitch.isOn
+		parameters.minPrice = priceTableViewCell?.rangeSlider.selectedMinimum
+		parameters.maxPrice = priceTableViewCell?.rangeSlider.selectedMaximum
 		
-		self.delegate?.filter(by: parameters)
+		self.delegate?.filterContent(by: parameters)
+		
 		close(sender)
 	}
 }
@@ -84,9 +90,9 @@ extension FilterViewController: UITableViewDelegate, UITableViewDataSource {
 	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 		switch indexPath.section {
 			case 0:
-				return 280
+				return 210
 			case 1:
-				return 260
+				return 250
 			case 2:
 				return 120
 			default:
@@ -127,31 +133,18 @@ extension FilterViewController: UITableViewDelegate, UITableViewDataSource {
 			case 0:
 				let cell = tableView.dequeueReusableCell(withIdentifier: "TypeFilterTableViewCell", for: indexPath) as? TypeFilterTableViewCell
 				
-				cell?.selectionStyle = .none
-				cell?.selectedBackgroundView = UIView()
-				
 				return cell ?? UITableViewCell()
 			case 1:
 				let cell = tableView.dequeueReusableCell(withIdentifier: "AreaFilterTableViewCell", for: indexPath) as? AreaFilterTableViewCell
-				
-				cell?.selectionStyle = .none
-				cell?.selectedBackgroundView = UIView()
 				
 				return cell ?? UITableViewCell()
 			case 2:
 				let cell = tableView.dequeueReusableCell(withIdentifier: "PriceFilterTableViewCell", for: indexPath) as? PriceFilterTableViewCell
 				
-				cell?.selectionStyle = .none
-				cell?.selectedBackgroundView = UIView()
-				
 				return cell ?? UITableViewCell()
 			default:
 				return UITableViewCell()
 		}
-	}
-	
-	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-		tableView.deselectRow(at: indexPath, animated: true)
 	}
 }
 
@@ -160,20 +153,5 @@ extension FilterViewController: TagListViewDelegate {
 	func tagPressed(_ title: String, tagView: TagView, sender: TagListView) {
 		UISelectionFeedbackGenerator().selectionChanged()
 		tagView.isSelected = !tagView.isSelected
-		
-		print(sender.selectedTags().map({return $0.currentTitle ?? ""}))
-	}
-}
-
-extension FilterViewController: TTRangeSliderDelegate {
-	
-	func rangeSlider(_ sender: TTRangeSlider!, didChangeSelectedMinimumValue selectedMinimum: Float, andMaximumValue selectedMaximum: Float) {
-		if sender.restorationIdentifier == "AreaRangeSlider" {
-			parameters.minArea = selectedMinimum
-			parameters.maxArea = selectedMaximum
-		} else if sender.restorationIdentifier == "PriceRangeSlider" {
-			parameters.minPrice = selectedMinimum
-			parameters.minPrice = selectedMaximum
-		}
 	}
 }

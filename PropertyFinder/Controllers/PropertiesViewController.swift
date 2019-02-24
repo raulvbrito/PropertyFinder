@@ -15,11 +15,33 @@ class PropertiesViewController: BaseViewController, FilterViewControllerDelegate
 	
 	let searchController = UISearchController(searchResultsController: nil)
 	
-	var propertyViewModels = [PropertyViewModel]()
-	var filteredPropertyViewModels = [PropertyViewModel]()
+	var propertyViewModels = [PropertyViewModel]() {
+		didSet {
+			tableView.hero.modifiers = [.cascade]
+			tableView.reloadData()
+		}
+	}
+	
+	var filteredPropertyViewModels = [PropertyViewModel]() {
+		didSet {
+			tableView.reloadData()
+		}
+	}
+	
 	var filteringByParameters = false
 	
-	@IBOutlet var tableView: UITableView!
+	@IBOutlet var tableView: UITableView! {
+		didSet {
+			PropertyService.fecthProperties { (error, properties) in
+				if let error = error {
+					print(error.domain)
+					return
+				}
+				
+				self.propertyViewModels = properties.map({return PropertyViewModel(property: $0)})
+			}
+		}
+	}
 	
 	
 	// MARK: - ViewController Lifecycle
@@ -27,26 +49,11 @@ class PropertiesViewController: BaseViewController, FilterViewControllerDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
 		
-		fetchData()
 		searchSetup()
     }
 	
 	
 	// MARK: - Methods
-	
-	@objc func fetchData() {
-		PropertyService.fecthProperties { (error, properties) in
-			if let error = error {
-				print(error.domain)
-				return
-			}
-			
-			self.tableView.hero.modifiers = [.cascade]
-			self.propertyViewModels = properties.map({return PropertyViewModel(property: $0)})
-			
-			self.tableView.reloadData()
-		}
-	}
 	
 	func searchSetup() {
 		searchController.searchResultsUpdater = self as UISearchResultsUpdating
@@ -70,24 +77,18 @@ class PropertiesViewController: BaseViewController, FilterViewControllerDelegate
 		return (searchController.isActive && !searchBarIsEmpty()) || filteringByParameters
 	}
 	
-	func filterContentForSearchText(_ searchText: String, scope: String = "All") {
+	func filterContent(by searchText: String, scope: String = "All") {
 		filteredPropertyViewModels = propertyViewModels.filter {
 			$0.name.lowercased().contains(searchText.lowercased())
 		}
-
-		tableView.reloadData()
 	}
 	
-	func filter(by parameters: Filter) {
-//		filteringByParameters = true
-//
-//		filteredPropertyViewModels = propertyViewModels.filter {
-//			return parameters.propertyTypes.map({ (tagView) -> String in
-//				return tagView.currentTitle ?? ""
-//			}).contains($0.type) && $0.area > parameters.minArea && $0.area < parameters.maxArea
-//		}
-		
-		tableView.reloadData()
+	func filterContent(by parameters: Filter) {
+		filteringByParameters = true
+
+		filteredPropertyViewModels = propertyViewModels.filter {
+			return parameters.propertyTypes.contains($0.type) && $0.area >= parameters.minArea && $0.area <= parameters.maxArea && $0.bedroomCount >= parameters.minBedrooms && $0.bedroomCount <= parameters.maxBedrooms && $0.furnishings == parameters.furnishings && Double($0.rentPrice.replacingOccurrences(of: ".", with: ""))! >= Double(parameters.minPrice) && Double($0.rentPrice.replacingOccurrences(of: ".", with: ""))! <= Double(parameters.maxPrice)
+		}
 	}
 	
 	@objc func filter(sender: UIButton) {
@@ -107,7 +108,6 @@ class PropertiesViewController: BaseViewController, FilterViewControllerDelegate
 			filterVC.delegate = self
         }
 	}
-
 }
 
 
@@ -135,9 +135,14 @@ extension PropertiesViewController: UITableViewDelegate, UITableViewDataSource {
 		let headerView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 40))
 
 		let label = UILabel(frame: CGRect(x: 16, y: 0, width: view.frame.size.width, height: 40))
-		label.text = "\(propertyViewModels.count) properties found"
 		label.font = UIFont.systemFont(ofSize: 16, weight: .medium)
 		label.textColor = .darkGray
+		
+		if isFiltering() {
+			label.text = "\(filteredPropertyViewModels.count) properties found"
+		} else {
+			label.text = "\(propertyViewModels.count) properties found"
+		}
 		
 		let filterButton = UIButton(frame: CGRect(x: view.frame.size.width - 50, y: 6, width: 25, height: 25))
 		filterButton.setTitle("", for: .normal)
@@ -176,8 +181,6 @@ extension PropertiesViewController: UITableViewDelegate, UITableViewDataSource {
 	}
 	
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-		tableView.deselectRow(at: indexPath, animated: true)
-		
 		if isFiltering() {
 			performSegue(withIdentifier: "PropertySegue", sender: filteredPropertyViewModels[indexPath.row])
 		} else {
@@ -188,6 +191,6 @@ extension PropertiesViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension PropertiesViewController: UISearchResultsUpdating {
 	func updateSearchResults(for searchController: UISearchController) {
-		filterContentForSearchText(searchController.searchBar.text!)
+		filterContent(by: searchController.searchBar.text!)
 	}
 }

@@ -33,6 +33,7 @@ class PropertyViewController: BaseViewController {
 		}
 	}
 	
+	
 	// MARK: - ViewController Lifecycle
 	
     override func viewDidLoad() {
@@ -107,17 +108,11 @@ extension PropertyViewController: UITableViewDelegate, UITableViewDataSource {
 		
 				cell?.propertyViewModel = propertyViewModel
 				
-				cell?.selectionStyle = .none
-				cell?.selectedBackgroundView = UIView()
-				
 				return cell ?? UITableViewCell()
 			case 1:
 				let cell = tableView.dequeueReusableCell(withIdentifier: "PropertyLocationTableViewCell", for: indexPath) as? PropertyLocationTableViewCell
 		
 				cell?.propertyViewModel = propertyViewModel
-				
-				cell?.selectionStyle = .none
-				cell?.selectedBackgroundView = UIView()
 				
 				return cell ?? UITableViewCell()
 			case 2:
@@ -125,17 +120,11 @@ extension PropertyViewController: UITableViewDelegate, UITableViewDataSource {
 		
 				cell?.propertyViewModel = propertyViewModel
 				
-				cell?.selectionStyle = .none
-				cell?.selectedBackgroundView = UIView()
-				
 				return cell ?? UITableViewCell()
 			case 3:
 				let cell = tableView.dequeueReusableCell(withIdentifier: "PropertyFactsTableViewCell", for: indexPath) as? PropertyFactsTableViewCell
 		
 				cell?.propertyViewModel = propertyViewModel
-				
-				cell?.selectionStyle = .none
-				cell?.selectedBackgroundView = UIView()
 				
 				return cell ?? UITableViewCell()
 			case 4:
@@ -143,17 +132,10 @@ extension PropertyViewController: UITableViewDelegate, UITableViewDataSource {
 		
 				cell?.propertyViewModel = propertyViewModel
 				
-				cell?.selectionStyle = .none
-				cell?.selectedBackgroundView = UIView()
-				
 				return cell ?? UITableViewCell()
 			default:
 				return UITableViewCell()
 		}
-	}
-	
-	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-		tableView.deselectRow(at: indexPath, animated: true)
 	}
 }
 

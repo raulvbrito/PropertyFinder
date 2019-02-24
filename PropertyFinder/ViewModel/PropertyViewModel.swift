@@ -24,6 +24,7 @@ public final class PropertyViewModel {
 	let bedroomCount: Int
 	let bathroomCount: Int
 	let area: Float
+	let furnishings: Bool
 	let reference: String
 	let rera: String
 	let amenities: [String]
@@ -43,6 +44,7 @@ public final class PropertyViewModel {
 		bedroomCount = property.bedroomCount
 		bathroomCount = property.bathroomCount
 		area = property.area
+		furnishings = property.furnishings
 		reference = property.reference
 		rera = property.rera
 		amenities = property.amenities

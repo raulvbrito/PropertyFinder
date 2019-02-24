@@ -9,7 +9,6 @@
 import Foundation
 
 typealias JSONDictionary = [String : Any]
-typealias JSONArray = [[String : Any]]
 
 class BaseService {
     class var instance: BaseService {
