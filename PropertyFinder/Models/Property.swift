@@ -28,7 +28,7 @@ struct Property: Mappable {
 	}
 	var bedroomCount: Int!
 	var bathroomCount: Int!
-	var area: Int!
+	var area: Float!
 	var reference: String!
 	var rera: String!
 	var amenities: [String]!

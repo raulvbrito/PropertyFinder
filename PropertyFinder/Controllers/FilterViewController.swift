@@ -8,18 +8,32 @@
 
 import UIKit
 import TagListView
+import TTRangeSlider
+
+protocol FilterViewControllerDelegate {
+     func filter(by parameters: Filter)
+}
 
 class FilterViewController: UIViewController {
 
 	// MARK: - Properties
 	
+	var delegate: FilterViewControllerDelegate?
+	
+	var parameters = Filter([:])
+	
 	@IBOutlet var tableView: UITableView!
+	@IBOutlet var statusBarBackgroundViewHeightConstraint: NSLayoutConstraint! {
+		didSet {
+			statusBarBackgroundViewHeightConstraint.constant = UIApplication.shared.statusBarFrame.size.height
+		}
+	}
 	@IBOutlet var filterButtonShadowView: UIView! {
 		didSet {
 			filterButtonShadowView.layer.shadowColor = UIColor(red: 237/255, green: 79/255, blue: 63/255, alpha: 1).cgColor
 			filterButtonShadowView.layer.shadowOpacity = 0.6
 			filterButtonShadowView.layer.shadowOffset = CGSize(width: 0, height: 2)
-			filterButtonShadowView.layer.shadowRadius = 3
+			filterButtonShadowView.layer.shadowRadius = 6
 			filterButtonShadowView.layer.shadowPath = UIBezierPath(rect: filterButtonShadowView.bounds).cgPath
 			filterButtonShadowView.layer.shouldRasterize = true
 		}
@@ -36,11 +50,20 @@ class FilterViewController: UIViewController {
     // MARK: - Methods
 	
 	@IBAction func close(_ sender: Any) {
+		UISelectionFeedbackGenerator().selectionChanged()
 		dismiss(animated: true, completion: nil)
 	}
 	
 	@IBAction func filter(_ sender: UIButton) {
-		UISelectionFeedbackGenerator().selectionChanged()
+//		let typeTableViewCell = tableView.cellForRow(at: IndexPath(row: 0, section: 1)) as? TypeFilterTableViewCell
+		let areaTableViewCell = tableView.cellForRow(at: IndexPath(row: 0, section: 1)) as? AreaFilterTableViewCell
+		
+//		parameters.propertyTypes(typeTableViewCell?.tagListView.selectedTags())
+		parameters.minBedrooms = Int(areaTableViewCell?.minBedroomCountLabel.text ?? "0")
+		parameters.maxBedrooms = Int(areaTableViewCell?.minBedroomCountLabel.text ?? "7")
+		parameters.furnishing = areaTableViewCell?.furnishingsSwitch.isOn
+		
+		self.delegate?.filter(by: parameters)
 		close(sender)
 	}
 }
@@ -135,6 +158,22 @@ extension FilterViewController: UITableViewDelegate, UITableViewDataSource {
 extension FilterViewController: TagListViewDelegate {
 	
 	func tagPressed(_ title: String, tagView: TagView, sender: TagListView) {
+		UISelectionFeedbackGenerator().selectionChanged()
 		tagView.isSelected = !tagView.isSelected
+		
+		print(sender.selectedTags().map({return $0.currentTitle ?? ""}))
+	}
+}
+
+extension FilterViewController: TTRangeSliderDelegate {
+	
+	func rangeSlider(_ sender: TTRangeSlider!, didChangeSelectedMinimumValue selectedMinimum: Float, andMaximumValue selectedMaximum: Float) {
+		if sender.restorationIdentifier == "AreaRangeSlider" {
+			parameters.minArea = selectedMinimum
+			parameters.maxArea = selectedMaximum
+		} else if sender.restorationIdentifier == "PriceRangeSlider" {
+			parameters.minPrice = selectedMinimum
+			parameters.minPrice = selectedMaximum
+		}
 	}
 }

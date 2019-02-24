@@ -9,7 +9,7 @@
 import UIKit
 import Hero
 
-class PropertiesViewController: BaseViewController {
+class PropertiesViewController: BaseViewController, FilterViewControllerDelegate {
 	
 	// MARK: - Properties
 	
@@ -17,6 +17,7 @@ class PropertiesViewController: BaseViewController {
 	
 	var propertyViewModels = [PropertyViewModel]()
 	var filteredPropertyViewModels = [PropertyViewModel]()
+	var filteringByParameters = false
 	
 	@IBOutlet var tableView: UITableView!
 	
@@ -51,10 +52,9 @@ class PropertiesViewController: BaseViewController {
 		searchController.searchResultsUpdater = self as UISearchResultsUpdating
 		searchController.searchBar.placeholder = "Search"
 		searchController.searchBar.setValue("Cancel", forKey:"_cancelButtonText")
-		searchController.searchBar.searchBarStyle = UISearchBar.Style.minimal
-		searchController.searchBar.backgroundImage = UIImage()
 		searchController.searchBar.tintColor = UIColor(red: 237/255, green: 79/255, blue: 63/255, alpha: 1)
-		searchController.searchBar.barTintColor = .clear
+		searchController.searchBar.backgroundColor = .white
+		searchController.searchBar.barTintColor = .white
 		
 		if #available(iOS 11.0, *) {
 			searchController.obscuresBackgroundDuringPresentation = false
@@ -67,14 +67,26 @@ class PropertiesViewController: BaseViewController {
 	}
 	
 	func isFiltering() -> Bool {
-		return searchController.isActive && !searchBarIsEmpty()
+		return (searchController.isActive && !searchBarIsEmpty()) || filteringByParameters
 	}
 	
 	func filterContentForSearchText(_ searchText: String, scope: String = "All") {
-		filteredPropertyViewModels = propertyViewModels.filter({( property : PropertyViewModel) -> Bool in
-			return property.name.lowercased().contains(searchText.lowercased())
-		})
+		filteredPropertyViewModels = propertyViewModels.filter {
+			$0.name.lowercased().contains(searchText.lowercased())
+		}
 
+		tableView.reloadData()
+	}
+	
+	func filter(by parameters: Filter) {
+//		filteringByParameters = true
+//
+//		filteredPropertyViewModels = propertyViewModels.filter {
+//			return parameters.propertyTypes.map({ (tagView) -> String in
+//				return tagView.currentTitle ?? ""
+//			}).contains($0.type) && $0.area > parameters.minArea && $0.area < parameters.maxArea
+//		}
+		
 		tableView.reloadData()
 	}
 	
@@ -89,6 +101,10 @@ class PropertiesViewController: BaseViewController {
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 		if let propertyVC = segue.destination as? PropertyViewController {
 			propertyVC.propertyViewModel = sender as? PropertyViewModel
+        }
+		
+        if let filterVC = segue.destination as? FilterViewController {
+			filterVC.delegate = self
         }
 	}
 

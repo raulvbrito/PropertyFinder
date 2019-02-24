@@ -16,7 +16,8 @@ class TypeFilterTableViewCell: UITableViewCell {
 	@IBOutlet var tagListView: TagListView! {
 		didSet {
 			tagListView.textFont = UIFont.systemFont(ofSize: 14, weight: .semibold)
-			tagListView.addTags(["Apartments", "Villas", "Townhouses", "Hotel Apartments", "Penthouse", "Duplexes", "Compounds", "Whole Buildings", "Bulk Rent Units", "Bungalows", "Full Floors"])
+			tagListView.addTags(["Apartment", "Villa", "Townhouse", "Hotel Apartment", "Penthouse", "Duplexe", "Compound", "Whole Building", "Bulk Rent Unit", "Bungalow", "Full Floor"])
+			tagListView.tagViews[0].isSelected = true
 		}
 	}
 }

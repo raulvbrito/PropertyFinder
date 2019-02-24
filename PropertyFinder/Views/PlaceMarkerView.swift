@@ -10,6 +10,8 @@ import UIKit
 
 class PlaceMarkerView: UIView {
 
+	// MARK: - Properties
+	
 	@IBOutlet var roundedView: UIView!
 	@IBOutlet var logoImageView: UIImageView!
 	@IBOutlet var locationPinImageView: UIImageView!

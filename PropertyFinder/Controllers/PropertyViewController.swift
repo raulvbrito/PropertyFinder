@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GoogleMaps
 
 class PropertyViewController: BaseViewController {
 	
@@ -21,6 +22,16 @@ class PropertyViewController: BaseViewController {
 		}
 	}
 	
+	@IBOutlet var contactButtonShadowView: UIView! {
+		didSet {
+			contactButtonShadowView.layer.shadowColor = UIColor(red: 237/255, green: 79/255, blue: 63/255, alpha: 1).cgColor
+			contactButtonShadowView.layer.shadowOpacity = 0.3
+			contactButtonShadowView.layer.shadowOffset = CGSize(width: 0, height: 2)
+			contactButtonShadowView.layer.shadowRadius = 8
+			contactButtonShadowView.layer.shadowPath = UIBezierPath(rect: contactButtonShadowView.bounds).cgPath
+			contactButtonShadowView.layer.shouldRasterize = true
+		}
+	}
 	
 	// MARK: - ViewController Lifecycle
 	
@@ -31,6 +42,36 @@ class PropertyViewController: BaseViewController {
 
 	// MARK: - Methods
 	
+	@IBAction func contactBroker(_ sender: UIButton) {
+		let optionMenu = UIAlertController(title: nil, message: "Choose a contact method", preferredStyle: .actionSheet)
+		
+		let callAction = UIAlertAction(title: "Call", style: .default) { _ in
+			if let url = URL(string: "tel://+5511986770136"), UIApplication.shared.canOpenURL(url) {
+				if #available(iOS 10, *) {
+					UIApplication.shared.open(url)
+				} else {
+					UIApplication.shared.openURL(url)
+				}
+			}
+		}
+		optionMenu.addAction(callAction)
+		
+		let emailAction = UIAlertAction(title: "E-mail", style: .default) { _ in
+			if let url = URL(string: "mailto:raulvbrito@hotmail.com") {
+				if #available(iOS 10.0, *) {
+					UIApplication.shared.open(url)
+				} else {
+					UIApplication.shared.openURL(url)
+				}
+			}
+		}
+		optionMenu.addAction(emailAction)
+		
+		let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+		optionMenu.addAction(cancelAction)
+		
+		self.present(optionMenu, animated: true, completion: nil)
+	}
 }
 
 
@@ -133,4 +174,16 @@ extension PropertyViewController: UICollectionViewDelegate, UICollectionViewData
 		
 		return cell ?? UICollectionViewCell()
 	}
+}
+
+extension PropertyViewController: GMSMapViewDelegate {
+
+	func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
+		if (UIApplication.shared.canOpenURL(URL(string:"comgooglemaps://")!)) {
+			UIApplication.shared.open(URL(string:"comgooglemaps://?center=\(self.propertyViewModel?.coordinates.latitude ?? 0),\(self.propertyViewModel?.coordinates.longitude ?? 0))&zoom=14&views=traffic&q=\(self.propertyViewModel?.coordinates.latitude ?? 0),\(String(describing: self.propertyViewModel?.coordinates.longitude ?? 0))")!, options: [:], completionHandler: nil)
+		} else if UIApplication.shared.canOpenURL(URL(string: "waze://")!) {
+			UIApplication.shared.open(URL(string: "waze://?ll=\(self.propertyViewModel?.coordinates.latitude ?? 0),\(self.propertyViewModel?.coordinates.longitude ?? 0)&navigate=yes")!, options: [:], completionHandler: nil)
+		}
+	}
+	
 }

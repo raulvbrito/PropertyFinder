@@ -12,6 +12,7 @@
 		412BD5FA222060620085AEC7 /* PlaceMarkerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 412BD5F7222056370085AEC7 /* PlaceMarkerView.xib */; };
 		412BD5FC222064350085AEC7 /* PropertyDescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412BD5FB222064350085AEC7 /* PropertyDescriptionTableViewCell.swift */; };
 		415C5D20222103C700E8BB14 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415C5D1F222103C700E8BB14 /* FilterViewController.swift */; };
+		41810372222238D900C349A0 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41810371222238D900C349A0 /* Filter.swift */; };
 		418FDA4722208CFA0096EB49 /* PropertyFactsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418FDA4622208CFA0096EB49 /* PropertyFactsTableViewCell.swift */; };
 		418FDA4922209A780096EB49 /* PropertyAmenitiesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418FDA4822209A780096EB49 /* PropertyAmenitiesTableViewCell.swift */; };
 		419E0F4F22211619002B175A /* TypeFilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419E0F4E22211619002B175A /* TypeFilterTableViewCell.swift */; };
@@ -44,6 +45,7 @@
 		412BD5F82220565B0085AEC7 /* PlaceMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceMarkerView.swift; sourceTree = "<group>"; };
 		412BD5FB222064350085AEC7 /* PropertyDescriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyDescriptionTableViewCell.swift; sourceTree = "<group>"; };
 		415C5D1F222103C700E8BB14 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		41810371222238D900C349A0 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 		418FDA4622208CFA0096EB49 /* PropertyFactsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyFactsTableViewCell.swift; sourceTree = "<group>"; };
 		418FDA4822209A780096EB49 /* PropertyAmenitiesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyAmenitiesTableViewCell.swift; sourceTree = "<group>"; };
 		419E0F4E22211619002B175A /* TypeFilterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeFilterTableViewCell.swift; sourceTree = "<group>"; };
@@ -155,8 +157,8 @@
 			isa = PBXGroup;
 			children = (
 				41AE26A6221F184100E58C84 /* Cells */,
-				412BD5F7222056370085AEC7 /* PlaceMarkerView.xib */,
 				412BD5F82220565B0085AEC7 /* PlaceMarkerView.swift */,
+				412BD5F7222056370085AEC7 /* PlaceMarkerView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -190,6 +192,7 @@
 		41AE26A8221F1E3A00E58C84 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				41810371222238D900C349A0 /* Filter.swift */,
 				41AE26A9221F1E6700E58C84 /* Property.swift */,
 			);
 			path = Models;
@@ -395,6 +398,7 @@
 				41AE26BA221F8C4400E58C84 /* SavedPropertiesViewController.swift in Sources */,
 				419E0F5122219BD5002B175A /* AreaFilterTableViewCell.swift in Sources */,
 				41AE26B6221F2D2800E58C84 /* BaseViewController.swift in Sources */,
+				41810372222238D900C349A0 /* Filter.swift in Sources */,
 				41AE26BE221F9E6100E58C84 /* PropertyViewController.swift in Sources */,
 				41AE26B8221F35AB00E58C84 /* PropertyTableViewCell.swift in Sources */,
 				41AE26C4221FD4A000E58C84 /* PropertyLocationTableViewCell.swift in Sources */,
