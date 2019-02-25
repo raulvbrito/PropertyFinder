@@ -1,5 +1,5 @@
 # Property Finder
-This is a `Property Finder` iOS App reformulation in order to demonstrate some of my design insights and exemplify how I can contribute to the project, both from a technical and product perspective
+This is a `Property Finder` iOS App reformulation in order to demonstrate some of my design insights and exemplify how I can contribute to the project success, both from a technical and product perspective
 
 ![PropertiesViewController](https://i.imgur.com/Ew4mAM9.png)
 ![FilterViewController](https://i.imgur.com/dCfP7cn.png)
