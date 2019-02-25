@@ -24,7 +24,6 @@ class PropertyLocationTableViewCell: UITableViewCell {
 			let padding = UIEdgeInsets(top: 30, left: 0, bottom: 0, right: 0)
 			mapView.padding = padding
 			
-			mapView.settings.scrollGestures = false
 			mapView.animate(to: GMSCameraPosition(target: propertyViewModel.coordinates, zoom: 15, bearing: -40, viewingAngle: 100))
 		}
 	}

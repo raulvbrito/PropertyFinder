@@ -33,6 +33,9 @@ class PropertyViewController: BaseViewController {
 		}
 	}
 	
+	@IBOutlet var contactButtonBackgroundView: UIView!
+	@IBOutlet var contactButton: UIButton!
+	
 	
 	// MARK: - ViewController Lifecycle
 	
@@ -45,6 +48,9 @@ class PropertyViewController: BaseViewController {
 	
 	@IBAction func contactBroker(_ sender: UIButton) {
 		let optionMenu = UIAlertController(title: nil, message: "Choose a contact method", preferredStyle: .actionSheet)
+		
+		optionMenu.popoverPresentationController?.sourceView = self.contactButtonBackgroundView
+		optionMenu.popoverPresentationController?.sourceRect = self.contactButtonBackgroundView.bounds
 		
 		let callAction = UIAlertAction(title: "Call", style: .default) { _ in
 			if let url = URL(string: "tel://+5511986770136"), UIApplication.shared.canOpenURL(url) {

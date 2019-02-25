@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Hero
 
 class PropertiesViewController: BaseViewController, FilterViewControllerDelegate {
 	
@@ -17,7 +16,6 @@ class PropertiesViewController: BaseViewController, FilterViewControllerDelegate
 	
 	var propertyViewModels = [PropertyViewModel]() {
 		didSet {
-			tableView.hero.modifiers = [.cascade]
 			tableView.reloadData()
 		}
 	}
@@ -30,9 +28,15 @@ class PropertiesViewController: BaseViewController, FilterViewControllerDelegate
 	
 	var filteringByParameters = false
 	
+	@IBOutlet var statusBarBackgroundViewHeightConstraint: NSLayoutConstraint! {
+		didSet {
+			statusBarBackgroundViewHeightConstraint.constant = UIApplication.shared.statusBarFrame.size.height
+		}
+	}
+	
 	@IBOutlet var tableView: UITableView! {
 		didSet {
-			PropertyService.fecthProperties { (error, properties) in
+			PropertyService.fetchProperties { (error, properties) in
 				if let error = error {
 					print(error.domain)
 					return

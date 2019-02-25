@@ -17,7 +17,7 @@ class SavedPropertiesViewController: BaseViewController {
 	
 	@IBOutlet var tableView: UITableView! {
 		didSet {
-			PropertyService.fecthProperties { (error, properties) in
+			PropertyService.fetchProperties { (error, properties) in
 				if let error = error {
 					print(error.domain)
 					return

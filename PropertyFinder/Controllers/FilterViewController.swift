@@ -21,7 +21,13 @@ class FilterViewController: UIViewController {
 	
 	var parameters = Filter([:])
 	
-	@IBOutlet var tableView: UITableView!
+	@IBOutlet var tableView: UITableView! {
+		didSet {
+			tableView.estimatedRowHeight = 230
+			tableView.rowHeight = UITableView.automaticDimension
+		}
+	}
+	
 	@IBOutlet var statusBarBackgroundViewHeightConstraint: NSLayoutConstraint! {
 		didSet {
 			statusBarBackgroundViewHeightConstraint.constant = UIApplication.shared.statusBarFrame.size.height
@@ -65,8 +71,8 @@ class FilterViewController: UIViewController {
 		parameters.minBedrooms = Int(areaTableViewCell?.minBedroomCountLabel.text ?? "0")
 		parameters.maxBedrooms = Int(areaTableViewCell?.maxBedroomCountLabel.text ?? "7")
 		parameters.furnishings = areaTableViewCell?.furnishingsSwitch.isOn
-		parameters.minPrice = priceTableViewCell?.rangeSlider.selectedMinimum
-		parameters.maxPrice = priceTableViewCell?.rangeSlider.selectedMaximum
+		parameters.minPrice = priceTableViewCell?.rangeSlider.selectedMinimum ?? 10000
+		parameters.maxPrice = priceTableViewCell?.rangeSlider.selectedMaximum ?? 1000000
 		
 		self.delegate?.filterContent(by: parameters)
 		
@@ -90,7 +96,7 @@ extension FilterViewController: UITableViewDelegate, UITableViewDataSource {
 	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 		switch indexPath.section {
 			case 0:
-				return 210
+				return UITableView.automaticDimension
 			case 1:
 				return 250
 			case 2:

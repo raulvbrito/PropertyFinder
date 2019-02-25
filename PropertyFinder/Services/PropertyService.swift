@@ -13,7 +13,7 @@ class PropertyService: BaseService {
 	
     // MARK: - Requests (Mock data)
 	
-    static func fecthProperties(completion: @escaping (_ error: NSError?, _ result: [Property]) -> Void){
+    static func fetchProperties(completion: @escaping (_ error: NSError?, _ result: [Property]) -> Void){
 		guard let jsonPath = Bundle.main.url(forResource: "Properties", withExtension: "json") else {
 			completion(NSError(domain: "Json file not found", code: 404, userInfo: nil), [])
 			return

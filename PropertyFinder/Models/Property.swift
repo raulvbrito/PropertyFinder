@@ -28,11 +28,6 @@ struct Property: Mappable {
 	var reference: String!
 	var rera: String!
 	var amenities: [String]!
-	var coordinates: CLLocationCoordinate2D! {
-		get {
-			return CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-		}
-	}
 	
 	init(_ map: JSONDictionary) {
 		images <- map.property("images")

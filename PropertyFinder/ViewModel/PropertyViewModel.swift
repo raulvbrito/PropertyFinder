@@ -9,7 +9,7 @@
 import Foundation
 import CoreLocation
 
-public final class PropertyViewModel {
+struct PropertyViewModel {
 
 	let property: Property
 	
@@ -20,7 +20,8 @@ public final class PropertyViewModel {
 	let buyPrice: String
 	let type: String
 	let location: String
-	var coordinates: CLLocationCoordinate2D
+	var latitude: Double
+	var longitude: Double
 	let bedroomCount: Int
 	let bathroomCount: Int
 	let area: Float
@@ -28,7 +29,11 @@ public final class PropertyViewModel {
 	let reference: String
 	let rera: String
 	let amenities: [String]
-	
+	var coordinates: CLLocationCoordinate2D {
+		get {
+			return CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+		}
+	}
 	
 	init(property: Property) {
 		self.property = property
@@ -40,7 +45,8 @@ public final class PropertyViewModel {
 		buyPrice = property.buyPrice
 		type = property.type
 		location = property.location
-		coordinates = property.coordinates
+		latitude = property.latitude
+		longitude = property.longitude
 		bedroomCount = property.bedroomCount
 		bathroomCount = property.bathroomCount
 		area = property.area
