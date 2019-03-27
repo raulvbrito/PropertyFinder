@@ -14,7 +14,9 @@ class BaseViewController: UIViewController {
         super.viewDidLoad()
 		
 		self.navigationController?.navigationBar.tintColor = UIColor.black
+		self.navigationController?.navigationBar.isTranslucent = false
 		
+		self.tabBarController?.tabBar.tintColor = UIColor(red: 237/255, green: 79/255, blue: 63/255, alpha: 1)
 		self.tabBarController?.tabBar.layer.borderWidth = 0.50
 		self.tabBarController?.tabBar.layer.borderColor = UIColor.clear.cgColor
 		self.tabBarController?.tabBar.clipsToBounds = true

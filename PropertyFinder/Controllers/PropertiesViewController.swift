@@ -8,11 +8,13 @@
 
 import UIKit
 
-class PropertiesViewController: BaseViewController, FilterViewControllerDelegate {
+class PropertiesViewController: BaseViewController, Storyboarded, FilterViewControllerDelegate {
 	
 	// MARK: - Properties
 	
 	let searchController = UISearchController(searchResultsController: nil)
+	
+	weak var coordinator: PropertiesCoordinator?
 	
 	var propertyViewModels = [PropertyViewModel]() {
 		didSet {
@@ -97,20 +99,8 @@ class PropertiesViewController: BaseViewController, FilterViewControllerDelegate
 	
 	@objc func filter(sender: UIButton) {
 		UISelectionFeedbackGenerator().selectionChanged()
-		performSegue(withIdentifier: "FilterSegue", sender: nil)
-	}
-	
-	
-	// MARK: - Navigation
-	
-	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-		if let propertyVC = segue.destination as? PropertyViewController {
-			propertyVC.propertyViewModel = sender as? PropertyViewModel
-        }
 		
-        if let filterVC = segue.destination as? FilterViewController {
-			filterVC.delegate = self
-        }
+		coordinator?.showFilters()
 	}
 }
 
@@ -120,11 +110,7 @@ class PropertiesViewController: BaseViewController, FilterViewControllerDelegate
 extension PropertiesViewController: UITableViewDelegate, UITableViewDataSource {
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		if isFiltering() {
-			return filteredPropertyViewModels.count
-		}
-		
-		return propertyViewModels.count
+		return isFiltering() ? filteredPropertyViewModels.count : propertyViewModels.count
 	}
 	
 	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -142,11 +128,7 @@ extension PropertiesViewController: UITableViewDelegate, UITableViewDataSource {
 		label.font = UIFont.systemFont(ofSize: 16, weight: .medium)
 		label.textColor = .darkGray
 		
-		if isFiltering() {
-			label.text = "\(filteredPropertyViewModels.count) properties found"
-		} else {
-			label.text = "\(propertyViewModels.count) properties found"
-		}
+		label.text = "\(isFiltering() ? filteredPropertyViewModels.count : propertyViewModels.count) properties found"
 		
 		let filterButton = UIButton(frame: CGRect(x: view.frame.size.width - 50, y: 6, width: 25, height: 25))
 		filterButton.setTitle("", for: .normal)
@@ -172,11 +154,10 @@ extension PropertiesViewController: UITableViewDelegate, UITableViewDataSource {
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "PropertyTableViewCell", for: indexPath) as? PropertyTableViewCell
 		
-		if isFiltering() {
-			cell?.propertyViewModel = filteredPropertyViewModels[indexPath.row]
-		} else {
-			cell?.propertyViewModel = propertyViewModels[indexPath.row]
-		}
+		let properties = isFiltering() ? filteredPropertyViewModels : propertyViewModels
+		
+		cell?.propertyViewModel = properties[indexPath.row]
+		cell?.bottomSeparatorView.isHidden = properties.count == indexPath.row + 1
 		
 		cell?.selectionStyle = .none
 		cell?.selectedBackgroundView = UIView()
@@ -185,11 +166,9 @@ extension PropertiesViewController: UITableViewDelegate, UITableViewDataSource {
 	}
 	
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-		if isFiltering() {
-			performSegue(withIdentifier: "PropertySegue", sender: filteredPropertyViewModels[indexPath.row])
-		} else {
-			performSegue(withIdentifier: "PropertySegue", sender: propertyViewModels[indexPath.row])
-		}
+		guard let navigationController = self.navigationController else { return }
+		
+		coordinator?.show(property: isFiltering() ? filteredPropertyViewModels[indexPath.row] : propertyViewModels[indexPath.row], from: navigationController)
 	}
 }
 

@@ -31,4 +31,5 @@ class PropertyTableViewCell: UITableViewCell {
 	@IBOutlet var typeLabel: UILabel!
 	@IBOutlet var priceLabel: UILabel!
 	@IBOutlet var locationLabel: UILabel!
+	@IBOutlet var bottomSeparatorView: UIView!
 }

@@ -9,9 +9,11 @@
 import UIKit
 import Hero
 
-class SavedPropertiesViewController: BaseViewController {
+class SavedPropertiesViewController: BaseViewController, Storyboarded {
 	
 	// MARK: - Properties
+	
+	weak var coordinator: SavedPropertiesCoordinator?
 	
 	var propertyViewModels = [PropertyViewModel]()
 	
@@ -37,16 +39,6 @@ class SavedPropertiesViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-	
-	
-	// MARK: - Navigation
-	
-	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-		if let propertyVC = segue.destination as? PropertyViewController {
-			propertyVC.propertyViewModel = sender as? PropertyViewModel
-        }
-	}
-
 }
 
 
@@ -66,6 +58,7 @@ extension SavedPropertiesViewController: UITableViewDelegate, UITableViewDataSou
 		let cell = tableView.dequeueReusableCell(withIdentifier: "SavedPropertyTableViewCell", for: indexPath) as? PropertyTableViewCell
 		
 		cell?.propertyViewModel = propertyViewModels[indexPath.row]
+		cell?.bottomSeparatorView.isHidden = propertyViewModels.count == indexPath.row + 1
 		
 		cell?.selectionStyle = .none
 		cell?.selectedBackgroundView = UIView()
@@ -76,6 +69,8 @@ extension SavedPropertiesViewController: UITableViewDelegate, UITableViewDataSou
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		tableView.deselectRow(at: indexPath, animated: true)
 		
-		performSegue(withIdentifier: "SavedPropertySegue", sender: propertyViewModels[indexPath.row])
+		guard let navigationController = self.navigationController else { return }
+		
+		coordinator?.parentCoordinator?.show(property: propertyViewModels[indexPath.row], from: navigationController)
 	}
 }

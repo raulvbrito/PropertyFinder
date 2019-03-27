@@ -8,7 +8,12 @@
 
 import UIKit
 
-class MyAccountViewController: BaseViewController {
+class MyAccountViewController: BaseViewController, Storyboarded {
+
+	// MARK: - Properties
+	
+	weak var coordinator: MyAccountCoordinator?
+	
 
 	// MARK: - ViewController Lifecycle
 	

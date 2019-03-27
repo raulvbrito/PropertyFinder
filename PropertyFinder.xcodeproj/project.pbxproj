@@ -12,6 +12,9 @@
 		412BD5FA222060620085AEC7 /* PlaceMarkerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 412BD5F7222056370085AEC7 /* PlaceMarkerView.xib */; };
 		412BD5FC222064350085AEC7 /* PropertyDescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412BD5FB222064350085AEC7 /* PropertyDescriptionTableViewCell.swift */; };
 		415C5D20222103C700E8BB14 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415C5D1F222103C700E8BB14 /* FilterViewController.swift */; };
+		41658D852249733500F98961 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41658D842249733500F98961 /* Coordinator.swift */; };
+		41658D882249738400F98961 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41658D872249738400F98961 /* Storyboarded.swift */; };
+		41658D8A2249778B00F98961 /* PropertiesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41658D892249778B00F98961 /* PropertiesCoordinator.swift */; };
 		41810372222238D900C349A0 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41810371222238D900C349A0 /* Filter.swift */; };
 		418FDA4722208CFA0096EB49 /* PropertyFactsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418FDA4622208CFA0096EB49 /* PropertyFactsTableViewCell.swift */; };
 		418FDA4922209A780096EB49 /* PropertyAmenitiesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418FDA4822209A780096EB49 /* PropertyAmenitiesTableViewCell.swift */; };
@@ -37,6 +40,9 @@
 		41AE26C0221FB54900E58C84 /* PropertyHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AE26BF221FB54900E58C84 /* PropertyHeaderTableViewCell.swift */; };
 		41AE26C2221FBC7800E58C84 /* PropertyGalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AE26C1221FBC7800E58C84 /* PropertyGalleryCollectionViewCell.swift */; };
 		41AE26C4221FD4A000E58C84 /* PropertyLocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AE26C3221FD4A000E58C84 /* PropertyLocationTableViewCell.swift */; };
+		41D521702249B7D8004A0FA8 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D5216F2249B7D8004A0FA8 /* BaseTabBarController.swift */; };
+		41D521722249DCA3004A0FA8 /* SavedPropertiesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D521712249DCA3004A0FA8 /* SavedPropertiesCoordinator.swift */; };
+		41D52174224AA738004A0FA8 /* MyAccountCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D52173224AA738004A0FA8 /* MyAccountCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +51,9 @@
 		412BD5F82220565B0085AEC7 /* PlaceMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceMarkerView.swift; sourceTree = "<group>"; };
 		412BD5FB222064350085AEC7 /* PropertyDescriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyDescriptionTableViewCell.swift; sourceTree = "<group>"; };
 		415C5D1F222103C700E8BB14 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		41658D842249733500F98961 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		41658D872249738400F98961 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		41658D892249778B00F98961 /* PropertiesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertiesCoordinator.swift; sourceTree = "<group>"; };
 		41810371222238D900C349A0 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 		418FDA4622208CFA0096EB49 /* PropertyFactsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyFactsTableViewCell.swift; sourceTree = "<group>"; };
 		418FDA4822209A780096EB49 /* PropertyAmenitiesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyAmenitiesTableViewCell.swift; sourceTree = "<group>"; };
@@ -72,6 +81,9 @@
 		41AE26BF221FB54900E58C84 /* PropertyHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		41AE26C1221FBC7800E58C84 /* PropertyGalleryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyGalleryCollectionViewCell.swift; sourceTree = "<group>"; };
 		41AE26C3221FD4A000E58C84 /* PropertyLocationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyLocationTableViewCell.swift; sourceTree = "<group>"; };
+		41D5216F2249B7D8004A0FA8 /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
+		41D521712249DCA3004A0FA8 /* SavedPropertiesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedPropertiesCoordinator.swift; sourceTree = "<group>"; };
+		41D52173224AA738004A0FA8 /* MyAccountCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountCoordinator.swift; sourceTree = "<group>"; };
 		7773439B0CBE2D4ABDA18634 /* Pods-PropertyFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PropertyFinder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PropertyFinder/Pods-PropertyFinder.debug.xcconfig"; sourceTree = "<group>"; };
 		CC55F250B90CDEE86AACFBEC /* Pods_PropertyFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PropertyFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -88,6 +100,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		41658D82224959CC00F98961 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				41D52173224AA738004A0FA8 /* MyAccountCoordinator.swift */,
+				41658D892249778B00F98961 /* PropertiesCoordinator.swift */,
+				41D521712249DCA3004A0FA8 /* SavedPropertiesCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
 		41AE267C221F117700E58C84 = {
 			isa = PBXGroup;
 			children = (
@@ -111,29 +133,31 @@
 			children = (
 				41AE2691221F117A00E58C84 /* Assets.xcassets */,
 				41AE26A1221F172F00E58C84 /* Controllers */,
+				41658D82224959CC00F98961 /* Coordinators */,
 				41AE2696221F117A00E58C84 /* Info.plist */,
 				41AE26B0221F237D00E58C84 /* Mocks */,
 				41AE26A8221F1E3A00E58C84 /* Models */,
 				41AE26AB221F21B800E58C84 /* Services */,
 				41AE26A7221F184F00E58C84 /* Storyboards */,
 				41AE26A4221F181E00E58C84 /* Supporting Files */,
-				41AE269C221F15A800E58C84 /* ViewModel */,
+				41AE269C221F15A800E58C84 /* ViewModels */,
 				41AE26A5221F183A00E58C84 /* Views */,
 			);
 			path = PropertyFinder;
 			sourceTree = "<group>";
 		};
-		41AE269C221F15A800E58C84 /* ViewModel */ = {
+		41AE269C221F15A800E58C84 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
 				41AE269F221F163C00E58C84 /* PropertyViewModel.swift */,
 			);
-			path = ViewModel;
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		41AE26A1221F172F00E58C84 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				41D5216F2249B7D8004A0FA8 /* BaseTabBarController.swift */,
 				41AE26B5221F2D2800E58C84 /* BaseViewController.swift */,
 				415C5D1F222103C700E8BB14 /* FilterViewController.swift */,
 				41AE26BB221F8CC700E58C84 /* MyAccountViewController.swift */,
@@ -148,7 +172,9 @@
 			isa = PBXGroup;
 			children = (
 				41AE2688221F117700E58C84 /* AppDelegate.swift */,
+				41658D842249733500F98961 /* Coordinator.swift */,
 				419E0F542221C8E0002B175A /* Extensions.swift */,
+				41658D872249738400F98961 /* Storyboarded.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -387,9 +413,12 @@
 			files = (
 				419E0F552221C8E0002B175A /* Extensions.swift in Sources */,
 				41AE2689221F117700E58C84 /* AppDelegate.swift in Sources */,
+				41D52174224AA738004A0FA8 /* MyAccountCoordinator.swift in Sources */,
 				41AE26AD221F221C00E58C84 /* BaseService.swift in Sources */,
+				41D521702249B7D8004A0FA8 /* BaseTabBarController.swift in Sources */,
 				41AE26BC221F8CC700E58C84 /* MyAccountViewController.swift in Sources */,
 				419E0F532221C5D5002B175A /* PriceFilterTableViewCell.swift in Sources */,
+				41658D882249738400F98961 /* Storyboarded.swift in Sources */,
 				419E0F4F22211619002B175A /* TypeFilterTableViewCell.swift in Sources */,
 				418FDA4722208CFA0096EB49 /* PropertyFactsTableViewCell.swift in Sources */,
 				41AE26A0221F163C00E58C84 /* PropertyViewModel.swift in Sources */,
@@ -402,13 +431,16 @@
 				41AE26BE221F9E6100E58C84 /* PropertyViewController.swift in Sources */,
 				41AE26B8221F35AB00E58C84 /* PropertyTableViewCell.swift in Sources */,
 				41AE26C4221FD4A000E58C84 /* PropertyLocationTableViewCell.swift in Sources */,
+				41658D8A2249778B00F98961 /* PropertiesCoordinator.swift in Sources */,
 				41AE26C0221FB54900E58C84 /* PropertyHeaderTableViewCell.swift in Sources */,
 				415C5D20222103C700E8BB14 /* FilterViewController.swift in Sources */,
 				412BD5F92220565B0085AEC7 /* PlaceMarkerView.swift in Sources */,
 				418FDA4922209A780096EB49 /* PropertyAmenitiesTableViewCell.swift in Sources */,
 				412BD5FC222064350085AEC7 /* PropertyDescriptionTableViewCell.swift in Sources */,
+				41658D852249733500F98961 /* Coordinator.swift in Sources */,
 				41AE26C2221FBC7800E58C84 /* PropertyGalleryCollectionViewCell.swift in Sources */,
 				41AE26A3221F180200E58C84 /* PropertiesViewController.swift in Sources */,
+				41D521722249DCA3004A0FA8 /* SavedPropertiesCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -565,7 +597,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.raulvbrito.PropertyFinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -584,7 +616,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.raulvbrito.PropertyFinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

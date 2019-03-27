@@ -13,10 +13,14 @@ import GoogleMaps
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	var window: UIWindow?
-
-
+	
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+	
 		GMSServices.provideAPIKey("AIzaSyAFhB-FNx_Qotli_MqYRJeBJuxk_IZeAEw")
+		
+		window = UIWindow(frame: UIScreen.main.bounds)
+		window?.rootViewController = BaseTabBarController()
+		window?.makeKeyAndVisible()
 		
 		return true
 	}

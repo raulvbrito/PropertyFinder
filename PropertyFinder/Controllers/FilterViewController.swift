@@ -13,9 +13,11 @@ protocol FilterViewControllerDelegate {
      func filterContent(by parameters: Filter)
 }
 
-class FilterViewController: UIViewController {
+class FilterViewController: UIViewController, Storyboarded {
 
 	// MARK: - Properties
+	
+	weak var coordinator: PropertiesCoordinator?
 	
 	var delegate: FilterViewControllerDelegate?
 	

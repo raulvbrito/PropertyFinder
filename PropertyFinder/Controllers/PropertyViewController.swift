@@ -9,9 +9,11 @@
 import UIKit
 import GoogleMaps
 
-class PropertyViewController: BaseViewController {
+class PropertyViewController: BaseViewController, Storyboarded {
 	
 	// MARK: - Properties
+	
+	weak var coordinator: PropertiesCoordinator?
 	
 	var propertyViewModel: PropertyViewModel?
 	
